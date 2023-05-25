@@ -47,7 +47,7 @@ Let's begin by exploring the power of shifting security left with Infrastructure
 scanning. As infrastructure is being defined as code, security must be integrated with the
 tools developers use.
 
-Fortunately,Prisma Cloud can be integrated into thedevelopment pipeline and tools
+Fortunately, Prisma Cloud can be integrated into the development pipeline and tools
 developers use to secure IaC. With Bridgecrew from Prisma Cloud you can begin leveraging
 the open source tool Checkov for free.
 
