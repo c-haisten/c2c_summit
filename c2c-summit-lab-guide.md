@@ -3,8 +3,7 @@
 
 ### Lab Introduction
 
-Thank you for joining today’s Infrastructure as Code (IaC) camp. The lab will focus on the ways
-that Prisma Cloud can help you secure IaC from the code to runtime.
+Welcome to our hands-on workshop on leveraging Prisma Cloud to detect and prevent misconfigurations and vulnerabilities within infrastructure as code (IaC) and application security (AppSec). Organizations face numerous challenges in maintaining the security of their cloud infrastructure, such as misconfigurations and vulnerabilities that can expose sensitive data or provide unauthorized access. Prisma Cloud, a comprehensive cloud security platform, empowers organizations to take control of their cloud security posture. It provides a unified approach to securing cloud environments, offering advanced capabilities to detect, assess, and remediate risks across infrastructure as code and application security. By leveraging Prisma Cloud, teams can proactively identify misconfigurations and vulnerabilities, reducing the attack surface and ensuring a robust security posture.
 
 Before we begin the lab let's start with a brief overview of the scenario to help frame the
 context.
