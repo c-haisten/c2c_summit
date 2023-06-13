@@ -55,9 +55,9 @@ To learn more visit: https://bridgecrew.io/checkov/
 
 #### Find and Fix Insecure Infrastructure Code
 
-The first place the lab will begin is with investigating Exampli Corp's code repository in GitHub. Follow the steps below :
+The first place the lab will begin is with investigating Exampli Corp's infrastructure code in the company's GitHub repository. 
 
-#### Find and Fix Insecure Infrastructure Code
+Follow the steps below :
 
 1. Login to [Prisma Cloud](https://app4.prismacloud.io/auth/signin).
 
