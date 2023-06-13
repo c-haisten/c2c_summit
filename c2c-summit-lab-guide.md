@@ -1,9 +1,10 @@
-# PRISMA CLOUD CODE TO CLOUD LAB (TEST)
+# PRISMA CLOUD CODE TO CLOUD LAB EXERCISE
 
 
 ### Lab Introduction
 
-Welcome to our hands-on workshop on leveraging Prisma Cloud to detect and prevent misconfigurations and vulnerabilities within infrastructure as code (IaC) and application security (AppSec). Organizations face numerous challenges in maintaining the security of their cloud infrastructure, such as misconfigurations and vulnerabilities that can expose sensitive data or provide unauthorized access. Prisma Cloud, a comprehensive cloud security platform, empowers organizations to take control of their cloud security posture. It provides a unified approach to securing cloud environments, offering advanced capabilities to detect, assess, and remediate risks across infrastructure as code and application security. By leveraging Prisma Cloud, teams can proactively identify misconfigurations and vulnerabilities, reducing the attack surface and ensuring a robust security posture.
+Thank you for joining today’s Code to Cloud hands on lab with Prisma Cloud. The lab will focus on the ways
+that Prisma Cloud can help you secure applications from code to cloud
 
 Before we begin the lab let's start with a brief overview of the scenario to help frame the
 context.
@@ -21,7 +22,7 @@ and security teams continue to leverage Prisma Cloud to monitor and protect runt
 resources, reduce the attack surface, and enforce least privilege.
 
 Will The Exampli Corp team take the time to build a secure app? Or will the stress of
-completing the Bank of Anthos app in time for the holiday season lead to mistakes?
+completing the Bank of Anthos app in time for deadlines lead to mistakes?
 
 ### Resources
 
@@ -52,7 +53,9 @@ the open source tool Checkov for free.
 
 To learn more visit: https://bridgecrew.io/checkov/
 
-In this exercise, we will take a look at some IaC templates within Exampli Corp’s repository.
+#### Find and Fix Insecure Infrastructure Code
+
+The first place the lab will begin is with investigating Exampli Corp's code repository in GitHub. Follow the steps below :
 
 #### Find and Fix Insecure Infrastructure Code
 
