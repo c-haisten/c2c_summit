@@ -4,7 +4,7 @@
 ### Lab Introduction
 
 Thank you for joining today’s Code to Cloud hands on lab with Prisma Cloud. The lab will focus on the ways
-that Prisma Cloud can help you secure applications from code to cloud
+that Prisma Cloud can help you secure applications from code to cloud.
 
 Before we begin the lab let's start with a brief overview of the scenario to help frame the
 context.
