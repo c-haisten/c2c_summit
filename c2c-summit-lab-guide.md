@@ -43,7 +43,52 @@ below :
 
 ### Exercise
 
-Let's begin by exploring the power of shifting security left with Infrastructure as code
+#### Discover risky assets
+
+Let's begin the lab by exploring Exampli Corp's existing assets to see if any alerts or vulnerabilities have been detected.
+
+1. Login to [Prisma Cloud](https://app4.prismacloud.io/auth/signin).
+
+2. Use the credentials provided by your Instructor to authenticate.
+
+3. Use the navigation pane on the left hand and click the **blue arrow** on the lower left
+side of the UI to open up the navigation pane and move between the different
+modules within Prisma Cloud.
+
+![Alt text for image](/screenshots/find-and-fix-insecure-infrastructure-code-3.png "Optional title")
+
+4. Next, use the navigation pane to select the **Inventory** module and then select
+**Assets.**
+
+![Alt text for image](/screenshots/discover-risky-assets-4.png "Optional title")
+
+5. Once in the Asset Inventory view, click on the **High Risk Assets** tab. Scroll towards the bottom and take a look at the **Google Compute Engine** service. Note the two columns **Assets with Alerts** and **Assets with Vulnerabilities**.
+
+![Alt text for image](/screenshots/discover-risky-assets-5.png "Optional title")
+
+6. Click on one of the hyperlinked numbers in the Assets with Alerts column.
+
+![Alt text for image](/screenshots/discover-risky-assets-6.png "Optional title")
+
+7. Now we have a view of the assets in question along with other useful metadata.
+
+![Alt text for image](/screenshots/discover-risky-assets-7.png "Optional title")
+
+8. Click on the first Asset Name to open a detailed side window view.
+
+![Alt text for image](/screenshots/discover-risky-assets-8.png "Optional title")
+
+9. From the side window view, we can explore the Alerts and Vulnerabilities associated with the asset in question. Note in the **Alerts** tab we can see the 4 High severity alerts associated with the asset.  
+
+![Alt text for image](/screenshots/discover-risky-assets-9.png "Optional title")
+
+![Alt text for image](/screenshots/discover-risky-assets-10.png "Optional title")
+
+Well done, you helped identify alerts and vulnerabilities present in Example Corp's assets!
+
+#### Find and Fix Insecure Infrastructure Code
+
+Let's begin this next exercise by exploring the power of shifting security left with Infrastructure as code
 scanning. As infrastructure is being defined as code, security must be integrated with the
 tools developers use.
 
@@ -53,9 +98,9 @@ the open source tool Checkov for free.
 
 To learn more visit: https://bridgecrew.io/checkov/
 
-#### Find and Fix Insecure Infrastructure Code
 
-The first place the lab will begin is with investigating Exampli Corp's infrastructure code in the company's GitHub repository. 
+
+The first place we will begin is with investigating Exampli Corp's infrastructure code in the company's GitHub repository. 
 
 Follow the steps below :
 
@@ -281,7 +326,7 @@ Cloud account)
 
 #### Compliance in the Cloud
 
-Many organizations struggle maintaining a grasp on compliance in the cloud. So far we can inspected Exampli’s IaC and found some troubling trends. Additionally, at runtime many assets are still vulnerable due to risky configurations and careless development practices.
+Many organizations struggle maintaining a grasp on compliance in the cloud. So far we have inspected Exampli’s IaC and found some troubling trends. Additionally, at runtime many assets are still vulnerable due to risky configurations and careless development practices.
 
 With multiple upcoming compliance audits bearing down on Exampli’s CISO’s calendar it's time to begin reporting on what is in a failed state and what needs to be done to get the
 organization’s cloud footprint compliant.
@@ -720,5 +765,4 @@ The Prisma Cloud team here at Palo Alto sincerely hopes you enjoyed this worksho
 [KustomizeGoat - Vulnerable by design Kustomize deployment](https://github.com/bridgecrewio/kustomizegoat)
 
 [SupplyGoat- Vulnerable by design SCA](https://github.com/bridgecrewio/supplygoat)
-
 
