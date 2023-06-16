@@ -3,7 +3,7 @@
 
 ### Lab Introduction
 
-Thank you for joining today’s Code to Cloud hands on lab with Prisma Cloud. The lab will focus on the ways
+Thank you for joining today's Code to Cloud hands on lab with Prisma Cloud. The lab will focus on the ways
 that Prisma Cloud can help you secure applications from code to cloud.
 
 Before we begin the lab let's start with a brief overview of the scenario to help frame the
@@ -62,7 +62,7 @@ modules within Prisma Cloud.
 
 ![Alt text for image](/screenshots/discover-risky-assets-4.png "Optional title")
 
-5. Once in the Asset Inventory view, click on the **High Risk Assets** tab. Scroll towards the bottom and take a look at the **Google Compute Engine** service. Note the two columns **Assets with Alerts** and **Assets with Vulnerabilities**.
+5. Once in the Asset Inventory view, click on the **High Risk Assets** tab. Scroll towards the bottom and take a look at the **Google Compute Engine** service. Note the two columns **Assets with Alerts** and **Assets with Vulnerabilities**. 
 
 ![Alt text for image](/screenshots/discover-risky-assets-5.png "Optional title")
 
@@ -78,13 +78,13 @@ modules within Prisma Cloud.
 
 ![Alt text for image](/screenshots/discover-risky-assets-8.png "Optional title")
 
-9. From the side window view, we can explore the Alerts and Vulnerabilities associated with the asset in question. Note in the **Alerts** tab we can see the 4 High severity alerts associated with the asset.  
+9. From the side window view, we can explore the Alerts and Vulnerabilities associated with the asset in question. Note in the **Alerts** tab we can see the 4 High severity alerts associated with the asset. Note the different **Policy Name** categories. We can see a couple issues right away that are a high risk such as **GCP VM instance that is internet reachable with unrestricted access (0.0.0.0/0) to Admin ports** and **GCP VM instance with data destruction permissions**. Addtionally in the **Findings** tab we can see a long list of CVE's that need to be addressed such as CVE-2023-24538, which allows code injection via Javascript. Feel free to explore the other alerts and CVE's for more insight. 
 
 ![Alt text for image](/screenshots/discover-risky-assets-9.png "Optional title")
 
 ![Alt text for image](/screenshots/discover-risky-assets-10.png "Optional title")
 
-Well done, you helped identify alerts and vulnerabilities present in Example Corp's assets!
+Well done, you helped identify alerts and vulnerabilities present in Exampli Corp's assets!
 
 #### Find and Fix Insecure Infrastructure Code
 
