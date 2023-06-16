@@ -104,49 +104,45 @@ The first place we will begin is with investigating Exampli Corp's infrastructur
 
 Follow the steps below :
 
-1. Login to [Prisma Cloud](https://app4.prismacloud.io/auth/signin).
-
-2. Use the credentials provided by your Instructor to authenticate.
-
-3. Use the navigation pane on the left hand and click the **blue arrow** on the lower left
+1. Use the navigation pane on the left hand and click the **blue arrow** on the lower left
 side of the UI to open up the navigation pane and move between the different
 modules within Prisma Cloud.
 
 ![Alt text for image](/screenshots/find-and-fix-insecure-infrastructure-code-3.png "Optional title")
 
-4. Next, use the navigation pane to select the **Code Security** module and then select
+2. Next, use the navigation pane to select the **Code Security** module and then select
 **Projects.**
 
 ![Alt text for image](/screenshots/find-and-fix-insecure-infrastructure-code-4.png "Optional title")
 
-5. Use the search function to select the **umman-manda/Exampli** repository
+3. Use the search function to select the **umman-manda/Exampli** repository
 
 ![Alt text for image](/screenshots/find-and-fix-insecure-infrastructure-code-5.png "Optional title")
 
-6. Once you have selected the correct repository, filter by “High” severity and let's take a
+4. Once you have selected the correct repository, filter by “High” severity and let's take a
 look at some troubling misconfigurations found in **/terraform/gcp**
 
 ![Alt text for image](/screenshots/find-and-fix-insecure-infrastructure-code-6.png "Optional title")
 
-7. Now that we have filtered by severity, explore the different misconfigurations and
+5. Now that we have filtered by severity, explore the different misconfigurations and
 identify the one that says **_GCP SQL database is publicly accessible._**
 
 ![Alt text for image](/screenshots/find-and-fix-insecure-infrastructure-code-7.png "Optional title")
 
-8. Click the Policy details button ![Alt text for image](/screenshots/policy-details-button.png "Optional title") to view guidelines on how to resolve the
+6. Click the Policy details button ![Alt text for image](/screenshots/policy-details-button.png "Optional title") to view guidelines on how to resolve the
 misconfiguration. Below is an example of how the policy box will look and the type of information you will see.
 
 ![Alt text for image](/screenshots/find-and-fix-insecure-infrastructure-code-8.png "Optional title")
 
-9. Reviewing the guidelines we can see the description of this misconfiguration, its potential risk, and how to remediate at build time and runtime.
+7. Reviewing the guidelines we can see the description of this misconfiguration, its potential risk, and how to remediate at build time and runtime.
 
 ![Alt text for image](/screenshots/find-and-fix-insecure-infrastructure-code-9.png "Optional title")
 
-10. Now navigate back to the Prisma Cloud platform. Click on the associated SQL database resource and view the helpful information about the misconfiguration such as its history, errors, details, and traceability. It also will give you an option to view the resource in its VCS.
+8. Now navigate back to the Prisma Cloud platform. Click on the associated SQL database resource and view the helpful information about the misconfiguration such as its history, errors, details, and traceability. It also will give you an option to view the resource in its VCS.
 
 ![Alt text for image](/screenshots/find-and-fix-insecure-infrastructure-code-10.png "Optional title")
 
-11. This misconfiguration makes the application vulnerable to attacks that could reveal sensitive data such as user credentials and financial information. This error could lead to big problems for the Bank of Anthos. By using Prisma Cloud code security, the Exampli Corp security team can avoid costly mistakes and protect the integrity of the application.
+9. This misconfiguration makes the application vulnerable to attacks that could reveal sensitive data such as user credentials and financial information. This error could lead to big problems for the Bank of Anthos. By using Prisma Cloud code security, the Exampli Corp security team can avoid costly mistakes and protect the integrity of the application.
 
 **There are many other examples to explore in the Exampli repo, feel free to use the filters and search bar to explore additional resources and findings.**
 
