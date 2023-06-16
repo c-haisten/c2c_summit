@@ -1,6 +1,5 @@
 # PRISMA CLOUD CODE TO CLOUD LAB EXERCISE
 
-
 ### Lab Introduction
 
 Thank you for joining today's Code to Cloud hands on lab with Prisma Cloud. The lab will focus on the ways
@@ -97,7 +96,6 @@ developers use to secure IaC. With Bridgecrew from Prisma Cloud you can begin le
 the open source tool Checkov for free.
 
 To learn more visit: https://bridgecrew.io/checkov/
-
 
 
 The first place we will begin is with investigating Exampli Corp's infrastructure code in the company's GitHub repository. 
@@ -257,195 +255,6 @@ Thankfully, Prisma Cloud allows the Exampli Co. security team to scan all their 
 
 12. Feel free to explore other templates and PR’s that have been submitted.
 
-#### Cloud Security Posture Management
-
-Cloud-native applications allow organizations to build and run scalable applications with great agility and resilience. However, they also present unique security challenges. Ensuring applications and services are secure at runtime is a core responsibility for security teams.
-
-In this section, you will explore some use cases for securing GKE resources and services.
-
-1. Let’s start with taking a look at the **Asset Inventory** page to get an idea of the scale of resources that are being monitored by this particular Prisma Cloud tenant.
-
-2. Begin by using the navigation panel on the left hand side of the UI.
-
-3. Ensure to use the filter and select **GCP** as the CloudType.
-
-![Alt text for image](/screenshots/cloud-security-posture-management-3.png "Optional title")
-
-4. The **Asset Inventory** can be a helpful place to get a high level view on cloud assets and their compliance with defined policies. Without constant visibility of what is being deployed in your cloud footprint, you cannot begin to secure it.
-
-5. Your screen should look similar to the one below:
-
-![Alt text for image](/screenshots/cloud-security-posture-management-5.png "Optional title")
-
-6. We know the Exampli Corp team is using Kubernetes. Let’s investigate further by clicking on the **Google Kubernetes Engine**.
-
-![Alt text for image](/screenshots/cloud-security-posture-management-6a.png "Optional title")
-
-![Alt text for image](/screenshots/cloud-security-posture-management-6b.png "Optional title")
-
-7. Here we can get a filtered view of the risky GKE clusters and some helpful information including the resource ID and Account ID, as well as where this resource is located. Let’s take a deeper look into **bank-of-anthos** and see this resource's history.
-
-8. Use the column on the left to quickly view Config and Alert information for this GKE cluster.
-
-![Alt text for image](/screenshots/cloud-security-posture-management-8.png "Optional title")
-
-9. Let's take a look at the raw config for this resource by clicking on the **code** icon.
-
-![Alt text for image](/screenshots/cloud-security-posture-management-9.png "Optional title")
-
-10. Here we can see the raw configuration for this GKE cluster. Do you see anything that might present risks?
-
-![Alt text for image](/screenshots/cloud-security-posture-management-10.png "Optional title")
-
-11. To learn more let's dig into the alerts associated with this GKE cluster and see if we can find out how to remediate any issues. Close out the resource config and click on the red exclamation point.
-
-![Alt text for image](/screenshots/cloud-security-posture-management-11.png "Optional title")
-
-12. Your screen should be similar to the screenshot below.
-
-![Alt text for image](/screenshots/cloud-security-posture-management-12.png "Optional title")
-
-13. Click on the number next to the **GCP Kubernetes cluster intra-node visibility disabled** alert in the **Alert Count** column.
-
-14. Your screen should look similar to the screen capture below.
-
-![Alt text for image](/screenshots/cloud-security-posture-management-14.png "Optional title")
-
-15. Here we see the bank-of-anthos resource is exposing east-west network traffic. If we click on the **Recommendation** tab we can see the recommended steps to resolve this issue.
-
-![Alt text for image](/screenshots/cloud-security-posture-management-15.png "Optional title")
-
-16. We can also choose to remediate this alert by clicking on the **remediate** option under the actions column. (This step requires admin access via a free trial or existing Prisma
-Cloud account)
-
-![Alt text for image](/screenshots/cloud-security-posture-management-16a.png "Optional title")
-
-![Alt text for image](/screenshots/cloud-security-posture-management-16b.png "Optional title")
-
-17. In addition to the asset inventory and leading cloud management database Prisma Cloud makes compliance incredibly easy. Let’s move on to the next exercise on compliance...
-
-#### Compliance in the Cloud
-
-Many organizations struggle maintaining a grasp on compliance in the cloud. So far we have inspected Exampli’s IaC and found some troubling trends. Additionally, at runtime many assets are still vulnerable due to risky configurations and careless development practices.
-
-With multiple upcoming compliance audits bearing down on Exampli’s CISO’s calendar it's time to begin reporting on what is in a failed state and what needs to be done to get the
-organization’s cloud footprint compliant.
-
-1. Start by using the navigation bar and locate the **Compliance** module. Select **Overview**.
-
-![Alt text for image](/screenshots/compliance-in-the-cloud-1.png "Optional title")
-
-2. Your screen should look similar to the screen capture below:
-
-![Alt text for image](/screenshots/compliance-in-the-cloud-2.png "Optional title")
-
-3. This page provides a high level view of all the unique assets and their associated adherence to various compliance frameworks and policies.
-
-When Prisma Cloud detects a violation of a policy it generates an alert.
-
-4. Leverage the filters to adjust the results and select GCP.
-
-![Alt text for image](/screenshots/compliance-in-the-cloud-4.png "Optional title")
-
-5. Your screen should look similar to the screen capture below :
-
-![Alt text for image](/screenshots/compliance-in-the-cloud-5.png "Optional title")
-
-6. We can now see Exampli’s associated assets and their compliance posture. Looking at the trend graph it is easy to see how Exampli Corp compliance has changed over time.
-
-![Alt text for image](/screenshots/compliance-in-the-cloud-6.png "Optional title")
-
-7. Leverage the filters and select the compliance framework **CIS v1.1.0 (GCP)**.
-
-![Alt text for image](/screenshots/compliance-in-the-cloud-7a.png "Optional title")
-
-![Alt text for image](/screenshots/compliance-in-the-cloud-7b.png "Optional title")
-
-8. This provides a focused view of Exampli’s GCP footprint and its adherence to this CIS
-Standard.
-
-To view the associated policies with CIS click the **value** under the policies tab. Your screen should look similar to the screen capture below :
-
-![Alt text for image](/screenshots/compliance-in-the-cloud-8.png "Optional title")
-
-9. To learn more about a particular policy in Prisma Cloud you can leverage the table at the bottom of the UI and read the description to gain more context.
-
-![Alt text for image](/screenshots/compliance-in-the-cloud-9.png "Optional title")
-
-10. Explore the different policies and their associated impact then navigate back to the compliance tab in your browser or click on the compliance module on the left hand side of the UI. Once on the **Compliance** page select the **Reports** tab.
-
-Your screen should look similar to the screen capture below :
-
-![Alt text for image](/screenshots/compliance-in-the-cloud-10.png "Optional title")
-
-On this page administrators of Prisma Cloud can generate compliance reports that provide a summary of the information that is presented in the Prisma Cloud UI. This can be very helpful for sharing with auditors and leaders.
-
-Please explore some of the generated reports and their information.
-
-In this lab we covered various topics around IaC security and CSPM but there are many additional features and capabilities within Prisma Cloud. Feel free to explore the UI and investigate different asset types.
-
-## Summary \ Resources
-
-The Prisma Cloud team here at Palo Alto sincerely hopes you enjoyed this workshop. Today, organizations need a growing set of capabilities to secure modern cloud applications. Implementing DevSecOps into your development and security workflows with Prisma Cloud can provide the increased speed and agility your organization needs to implement zero trust throughout the entire development lifecycle. Check out the resources below for more information!
-
-[Live Workshops](https://bridgecrew.io/resource/workshops/)
-
-[DevSecTalks Podcast](https://www.paloaltonetworks.com/devsectalks/)
-
-[Supply Chain Security](https://bridgecrew.io/software-supply-chain-security/)
-
-[Cloud DevSecOps](https://bridgecrew.io/cloud-devsecops/)
-
-[Learn More](https://www.paloaltonetworks.com/prisma/cloud)
-
-##### Sample Git Repositories
-
-[TerraGoat - Vulnerable by design Terraform Infrastructure](https://github.com/bridgecrewio/terragoat)
-
-[Cfngoat - Vulnerable by design Cloudformation Template](https://github.com/bridgecrewio/cfngoat)
-
-[CdkGoat - Vulnerable by design AWS CDK Infrastructure](https://github.com/bridgecrewio/cdkgoat)
-
-[BicepGoat - Vulnerable by design Bicep and ARM Infrastructure](https://github.com/bridgecrewio/bicepgoat)
-
-[KubernetesGoat-Vulnerable by design KubernetesCluster](https://github.com/bridgecrewio/kubernetes-goattest)
-
-[KustomizeGoat - Vulnerable by design Kustomize deployment](https://github.com/bridgecrewio/kustomizegoat)
-
-[SupplyGoat- Vulnerable by design SCA](https://github.com/bridgecrewio/supplygoat)
-
-
-# PRISMA CLOUD APPSEC BOOTCAMP
-
-
-### Lab Introduction
-
-Thank you for joining today’s AppSec camp. The lab will focus on application security throughout the software development lifecycle. Before we begin the lab let's start with a brief overview of the lab scenario to help frame the context.
-
-### Scenario
-
-The Exampli Corp product group is rushing to finish a banking app for their customer Bank of Anthos in time for the holiday season when spending patterns spike. Up against unrealistic deadlines the development and infrastructure teams are working around the clock to get their app built, tested, and released to hit their deadlines.
-
-Fortunately, Exampli Corp recently integrated Prisma Cloud into their development lifecycle adopting shift left security from code to cloud. Once in production Exampli Corps operations and security teams continue to leverage Prisma Cloud to monitor and protect runtime resources, reduce the attack surface, and enforce least privilege.
-
-Will The Exampli Corp team take the time to build a secure app? Or will the stress of completing the Bank of Anthos app in time for the holiday season lead to mistakes?
-
-### Resources
-
-Vulnerable Repo:
-
-In this lab we leverage some intentionally vulnerable code repository. To learn more about the project and its contributors visit the link below:
-
-- https://github.com/bridgecrewio/supplygoat
-
-Bank of Anthos Application:
-
-In this lab there is a mock banking application that is used as the application the Exampli Corp is building. To learn more about the project and its contributors visit the link below:
-
-
-- https://github.com/GoogleCloudPlatform/bank-of-anthos
-
-
 ### Exercise
 
 Let's begin by exploring the power of shifting security left with Infrastructure as code scanning. As infrastructure is being defined as code security must be integrated with the tools developers use. In this exercise, we will take a look at some IaC templates within Exampli Corp’s repository.
@@ -540,40 +349,6 @@ Here we can quickly identify valuable information like the package version, lice
 8. How many Vulnerabilities are associated with the **cryptography: 38.0.1** package? Read the **Details** section to discover more about the CVE and confirm the **Fix Version**. Are there other packages with a higher CVSS score?
 
 Now that you have helped to protect the Bank of Anthos banking app Software Supply Chain, let’s take a look at the recent activity of the Exampli Corp developers.
-
-#### Scan Private and Open-Source Registries
-
-Moving right in the development cycle the next step is to validate the security of the container images used in the Bank of Anthos application. Fortunately, Prisma Cloud can be leveraged to gain insights into both private and open source container registries. In this next exercise, we will examine the Bank of Anthos frontend image in Exampli Corp’s private registry as well as some other open source images found in public registries.
-
-1. Use the navigation pane to select the **Compute** module and then select **Vulnerabilities** under the **Monitor** section.
-
-![Alt text for image](/screenshots/scan-private-open-source-registries-1a.png "Optional title")
-
-![Alt text for image](/screenshots/scan-private-open-source-registries-1b.png "Optional title")
-
-2. Click on **Images** and then **Registries** to see vulnerability scan reports for registry images.
-
-![Alt text for image](/screenshots/scan-private-open-source-registries-2.png "Optional title")
-
-3. Here we can see reports for both public and private registries. Let’s take a look at the **boa-frontend** image under the **us-docker.pkg.dev** registry being leveraged by Exampli Corp.
-
-![Alt text for image](/screenshots/scan-private-open-source-registries-3.png "Optional title")
-
-4. We can see a number of high-severity issues in the **Vulnerabilities** tab. Expand the row associated with the **zlib** package. Hover over the number circled in red under the **Risk factors** column. Here we can get an idea of attack complexity and vectors.
-
-![Alt text for image](/screenshots/scan-private-open-source-registries-4.png "Optional title")
-
-5. Navigate back to the **Registry images** page and look at one of the open-source package repositories. Click on the **/library/nginx** repository with the 1.22.1 tag.
-
-![Alt text for image](/screenshots/scan-private-open-source-registries-5.png "Optional title")
-
-6. Click on the **Compliance** tab and expand the high severity entry. Here you can gather a full description to get a better understanding of the compliance error.
-
-![Alt text for image](/screenshots/scan-private-open-source-registries-6.png "Optional title")
-
-7. Next, let’s take a look at an open source container registry.
-
-We’ve gotten a better idea of Exampli Corp’s registry image hygiene. Let’s explore further to gain more insight and protect the Bank of Anthos app with Prisma Cloud.
 
 #### Deploy Secure Applications
 
