@@ -1,6 +1,5 @@
 # PRISMA CLOUD CODE TO CLOUD LAB EXERCISE
 
-
 ### Lab Introduction
 
 Thank you for joining today’s Code to Cloud hands on lab with Prisma Cloud. The lab will focus on the ways
@@ -85,6 +84,66 @@ modules within Prisma Cloud.
 ![Alt text for image](/screenshots/discover-risky-assets-10.png "Optional title")
 
 Well done, you helped identify alerts and vulnerabilities present in Exampli Corp's GKE assets. In the next section you will explore how to secure infrastructure code by looking at some of Exampli's repositories.  
+
+#### Compliance in the Cloud
+
+Many organizations struggle maintaining a grasp on compliance in the cloud. So far we have inspected Exampli’s IaC and found some troubling trends. Additionally, at runtime many assets are still vulnerable due to risky configurations and careless development practices.
+
+With multiple upcoming compliance audits bearing down on Exampli’s CISO’s calendar it's time to begin reporting on what is in a failed state and what needs to be done to get the
+organization’s cloud footprint compliant.
+
+1. Start by using the navigation bar and locate the **Compliance** module. Select **Overview**.
+
+![Alt text for image](/screenshots/compliance-in-the-cloud-1.png "Optional title")
+
+2. Your screen should look similar to the screen capture below:
+
+![Alt text for image](/screenshots/compliance-in-the-cloud-2.png "Optional title")
+
+3. This page provides a high level view of all the unique assets and their associated adherence to various compliance frameworks and policies.
+
+When Prisma Cloud detects a violation of a policy it generates an alert.
+
+4. Leverage the filters to adjust the results and select GCP.
+
+![Alt text for image](/screenshots/compliance-in-the-cloud-4.png "Optional title")
+
+5. Your screen should look similar to the screen capture below :
+
+![Alt text for image](/screenshots/compliance-in-the-cloud-5.png "Optional title")
+
+6. We can now see Exampli’s associated assets and their compliance posture. Looking at the trend graph it is easy to see how Exampli Corp compliance has changed over time.
+
+![Alt text for image](/screenshots/compliance-in-the-cloud-6.png "Optional title")
+
+7. Leverage the filters and select the compliance framework **CIS v1.1.0 (GCP)**.
+
+![Alt text for image](/screenshots/compliance-in-the-cloud-7a.png "Optional title")
+
+![Alt text for image](/screenshots/compliance-in-the-cloud-7b.png "Optional title")
+
+8. This provides a focused view of Exampli’s GCP footprint and its adherence to this CIS
+Standard.
+
+To view the associated policies with CIS click the **value** under the policies tab. Your screen should look similar to the screen capture below :
+
+![Alt text for image](/screenshots/compliance-in-the-cloud-8.png "Optional title")
+
+9. To learn more about a particular policy in Prisma Cloud you can leverage the table at the bottom of the UI and read the description to gain more context.
+
+![Alt text for image](/screenshots/compliance-in-the-cloud-9.png "Optional title")
+
+10. Explore the different policies and their associated impact then navigate back to the compliance tab in your browser or click on the compliance module on the left hand side of the UI. Once on the **Compliance** page select the **Reports** tab.
+
+Your screen should look similar to the screen capture below :
+
+![Alt text for image](/screenshots/compliance-in-the-cloud-10.png "Optional title")
+
+On this page administrators of Prisma Cloud can generate compliance reports that provide a summary of the information that is presented in the Prisma Cloud UI. This can be very helpful for sharing with auditors and leaders.
+
+Please explore some of the generated reports and their information.
+
+In this lab we covered various topics around IaC security and CSPM but there are many additional features and capabilities within Prisma Cloud. Feel free to explore the UI and investigate different asset types.
 
 #### Find and Fix Insecure Infrastructure Code
 
@@ -253,132 +312,7 @@ Thankfully, Prisma Cloud allows the Exampli Co. security team to scan all their 
 
 12. Feel free to explore other templates and PR’s that have been submitted.
 
-#### Cloud Security Posture Management
 
-Cloud-native applications allow organizations to build and run scalable applications with great agility and resilience. However, they also present unique security challenges. Ensuring applications and services are secure at runtime is a core responsibility for security teams.
-
-In this section, you will explore some use cases for securing GKE resources and services.
-
-1. Let’s start with taking a look at the **Asset Inventory** page to get an idea of the scale of resources that are being monitored by this particular Prisma Cloud tenant.
-
-2. Begin by using the navigation panel on the left hand side of the UI.
-
-3. Ensure to use the filter and select **GCP** as the CloudType.
-
-![Alt text for image](/screenshots/cloud-security-posture-management-3.png "Optional title")
-
-4. The **Asset Inventory** can be a helpful place to get a high level view on cloud assets and their compliance with defined policies. Without constant visibility of what is being deployed in your cloud footprint, you cannot begin to secure it.
-
-5. Your screen should look similar to the one below:
-
-![Alt text for image](/screenshots/cloud-security-posture-management-5.png "Optional title")
-
-6. We know the Exampli Corp team is using Kubernetes. Let’s investigate further by clicking on the **Google Kubernetes Engine**.
-
-![Alt text for image](/screenshots/cloud-security-posture-management-6a.png "Optional title")
-
-![Alt text for image](/screenshots/cloud-security-posture-management-6b.png "Optional title")
-
-7. Here we can get a filtered view of the risky GKE clusters and some helpful information including the resource ID and Account ID, as well as where this resource is located. Let’s take a deeper look into **bank-of-anthos** and see this resource's history.
-
-8. Use the column on the left to quickly view Config and Alert information for this GKE cluster.
-
-![Alt text for image](/screenshots/cloud-security-posture-management-8.png "Optional title")
-
-9. Let's take a look at the raw config for this resource by clicking on the **code** icon.
-
-![Alt text for image](/screenshots/cloud-security-posture-management-9.png "Optional title")
-
-10. Here we can see the raw configuration for this GKE cluster. Do you see anything that might present risks?
-
-![Alt text for image](/screenshots/cloud-security-posture-management-10.png "Optional title")
-
-11. To learn more let's dig into the alerts associated with this GKE cluster and see if we can find out how to remediate any issues. Close out the resource config and click on the red exclamation point.
-
-![Alt text for image](/screenshots/cloud-security-posture-management-11.png "Optional title")
-
-12. Your screen should be similar to the screenshot below.
-
-![Alt text for image](/screenshots/cloud-security-posture-management-12.png "Optional title")
-
-13. Click on the number next to the **GCP Kubernetes cluster intra-node visibility disabled** alert in the **Alert Count** column.
-
-14. Your screen should look similar to the screen capture below.
-
-![Alt text for image](/screenshots/cloud-security-posture-management-14.png "Optional title")
-
-15. Here we see the bank-of-anthos resource is exposing east-west network traffic. If we click on the **Recommendation** tab we can see the recommended steps to resolve this issue.
-
-![Alt text for image](/screenshots/cloud-security-posture-management-15.png "Optional title")
-
-16. We can also choose to remediate this alert by clicking on the **remediate** option under the actions column. (This step requires admin access via a free trial or existing Prisma
-Cloud account)
-
-![Alt text for image](/screenshots/cloud-security-posture-management-16a.png "Optional title")
-
-![Alt text for image](/screenshots/cloud-security-posture-management-16b.png "Optional title")
-
-17. In addition to the asset inventory and leading cloud management database Prisma Cloud makes compliance incredibly easy. Let’s move on to the next exercise on compliance...
-
-#### Compliance in the Cloud
-
-Many organizations struggle maintaining a grasp on compliance in the cloud. So far we have inspected Exampli’s IaC and found some troubling trends. Additionally, at runtime many assets are still vulnerable due to risky configurations and careless development practices.
-
-With multiple upcoming compliance audits bearing down on Exampli’s CISO’s calendar it's time to begin reporting on what is in a failed state and what needs to be done to get the
-organization’s cloud footprint compliant.
-
-1. Start by using the navigation bar and locate the **Compliance** module. Select **Overview**.
-
-![Alt text for image](/screenshots/compliance-in-the-cloud-1.png "Optional title")
-
-2. Your screen should look similar to the screen capture below:
-
-![Alt text for image](/screenshots/compliance-in-the-cloud-2.png "Optional title")
-
-3. This page provides a high level view of all the unique assets and their associated adherence to various compliance frameworks and policies.
-
-When Prisma Cloud detects a violation of a policy it generates an alert.
-
-4. Leverage the filters to adjust the results and select GCP.
-
-![Alt text for image](/screenshots/compliance-in-the-cloud-4.png "Optional title")
-
-5. Your screen should look similar to the screen capture below :
-
-![Alt text for image](/screenshots/compliance-in-the-cloud-5.png "Optional title")
-
-6. We can now see Exampli’s associated assets and their compliance posture. Looking at the trend graph it is easy to see how Exampli Corp compliance has changed over time.
-
-![Alt text for image](/screenshots/compliance-in-the-cloud-6.png "Optional title")
-
-7. Leverage the filters and select the compliance framework **CIS v1.1.0 (GCP)**.
-
-![Alt text for image](/screenshots/compliance-in-the-cloud-7a.png "Optional title")
-
-![Alt text for image](/screenshots/compliance-in-the-cloud-7b.png "Optional title")
-
-8. This provides a focused view of Exampli’s GCP footprint and its adherence to this CIS
-Standard.
-
-To view the associated policies with CIS click the **value** under the policies tab. Your screen should look similar to the screen capture below :
-
-![Alt text for image](/screenshots/compliance-in-the-cloud-8.png "Optional title")
-
-9. To learn more about a particular policy in Prisma Cloud you can leverage the table at the bottom of the UI and read the description to gain more context.
-
-![Alt text for image](/screenshots/compliance-in-the-cloud-9.png "Optional title")
-
-10. Explore the different policies and their associated impact then navigate back to the compliance tab in your browser or click on the compliance module on the left hand side of the UI. Once on the **Compliance** page select the **Reports** tab.
-
-Your screen should look similar to the screen capture below :
-
-![Alt text for image](/screenshots/compliance-in-the-cloud-10.png "Optional title")
-
-On this page administrators of Prisma Cloud can generate compliance reports that provide a summary of the information that is presented in the Prisma Cloud UI. This can be very helpful for sharing with auditors and leaders.
-
-Please explore some of the generated reports and their information.
-
-In this lab we covered various topics around IaC security and CSPM but there are many additional features and capabilities within Prisma Cloud. Feel free to explore the UI and investigate different asset types.
 
 ## Summary \ Resources
 
