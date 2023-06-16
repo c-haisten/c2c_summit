@@ -84,7 +84,7 @@ modules within Prisma Cloud.
 
 ![Alt text for image](/screenshots/discover-risky-assets-10.png "Optional title")
 
-Well done, you helped identify alerts and vulnerabilities present in Example Corp's assets!
+Well done, you helped identify alerts and vulnerabilities present in Exampli Corp's GKE assets. In the next section you will explore how to secure infrastructure code by looking at some of Exampli's repositories.  
 
 #### Find and Fix Insecure Infrastructure Code
 
