@@ -85,6 +85,157 @@ modules within Prisma Cloud.
 
 Well done, you helped identify alerts and vulnerabilities present in Exampli Corp's assets!
 
+## Securing Applications at Runtime
+
+Wait a second, there are critical vulnerabilities in that deployed frontend image! Let’s take a few minutes to investigate all GCP resources that Exampli Corp owns and secure the final phase of the application lifecycle.
+
+Cloud-native applications allow organizations to build and run scalable applications with great agility and resilience. However, they also present unique security challenges.Ensuring applications and services are secure at runtime is a core responsibility for security teams.
+
+The Exampli Corp team needs to take the security of the banking application just as seriously as Bank of Anthos takes the physical security of their banks. Just like physical currency, data must be secured and unauthorized access prevented when possible. In the Cloud, this means ensuring you have visibility on all of your assets, actively investigating suspicious activity, and
+protecting your environment from attacks. Additionally, The Exampli security team needs to ensure they follow all best practices and security frameworks that govern their industry.
+
+In this section, you will explore some use cases for protecting your applications during runtime.
+
+##### Maintaining Visibility
+
+The first step to protecting applications is to gain and maintain comprehensive visibility of your applications and all their associated resources. If Exampli Corp does not have oversight of their cloud environment it is impossible for them to stop emerging threats, respond to incidents, or reduce vulnerabilities. In a modern multi-cloud and hybrid world, applications are broken into different environments across the clouds like VMs, containers, serverless compute architecture types. Maintaining visibility is essential to protecting applications at runtime.
+
+Lets help Exampli Corp get a clear picture of the Bank of Anthos application by using Prisma Cloud’s Radar feature.
+
+1. The Radar feature lets you gain a bird’s eye view to monitor and understand your cloud environment. It helps you to visualize the connectivity between microservices and search for vulnerabilities. Navigate to **Compute -> Radar -> Containers** and select the cluster **bank-of-anthos**.
+
+![Alt text for image](/screenshots/maintaining-visibility-1.png "Optional title")
+
+2. Once you have selected the correct cluster your screen should look similar the the screenshot below:
+
+![Alt text for image](/screenshots/maintaining-visibility-2.png "Optional title")
+
+3. Radar provides a visual depiction of inter- and intra-network connections between containers, apps, and cluster services across your environment. It shows the ports associated with each connection, the direction of traffic flow, and internet accessibility.Take some time to play around with the Radar feature and think through the following questions:
+
+What type of information can you learn by clicking on the nodes?
+How does this visibility help you protect your applications?
+
+##### Investigate Incidents at Runtime
+
+Exampli Corp has adopted Prisma Cloud and maintained consistent visibility on their applications. But seeing your resources does not make them immune to incidents during runtime. Thankfully, Prisma Cloud offers AppSec solutions for the entire lifecycle of your
+applications. By using incident explorer the Exampli Corp Security team gets real-time detection and analysis of all potential threats that violate their security policies. Let's take a look and see if there are any incidents in our cloud environment.
+
+1. Let's begin by navigating to **Monitor -> Runtime -> Incident Explorer**. On this screen we can view suspicious events collected by our runtime and firewall sensors. Take a look around the page and get a feel for the types of incidents being reported.
+
+![Alt text for image](/screenshots/investigate-incidents-at-runtime-1.png "Optional title")
+
+2. Next, click on **Container Models** tab. Here we can view all of our containers and take a deeper look at the forensics to see if there are any security concerns that slipped through the cracks.
+
+![Alt text for image](/screenshots/investigate-incidents-at-runtime-2.png "Optional title")
+
+3. We know that Exampli Corp is getting ready to release the new Bank of Anthos App, so let's search **“gcr.io/bank-of-anthos-ci/frontend:v0.5.5”** in the filter box to see how the containers are looking.
+
+![Alt text for image](/screenshots/investigate-incidents-at-runtime-3.png "Optional title")
+
+4. Great! Now let's click on the microscope icon to take a look at the digital forensics
+
+![Alt text for image](/screenshots/investigate-incidents-at-runtime-4.png "Optional title")
+
+5. Here you can see all the events displayed. Let’s take a deeper look at these events to get some details and see what has been happening with our bank-of-anthos-frontend.
+
+![Alt text for image](/screenshots/investigate-incidents-at-runtime-5.png "Optional title")
+
+6. Spend some time looking through the events and answer the following questions:
+
+What information can be gathered from the events?
+What types of events are being displayed?
+Should we be concerned about any of these events? What action if any should be taken?
+
+
+##### Preventing attacks
+
+One of the most important parts of securing the banking app during runtime is preventing attacks. Bank of Anthos invests significant resources in guaranteeing the security of their physical banks. They have security cameras to log and monitor access, sensors to alert on threats, but most importantly, banks have safes and security guards. In the worst case outcome if all prior controls fail there are physical preventative capabilities to protect the critical assets.
+
+Prisma Cloud provides process level detail and critical forensic information to give both visibility and aid in threat investigations for indicators of compromise. Spend some time reviewing the forensic information Prisma Cloud provides, feel free to look back in time.
+
+1. Next, let’s take a closer look at some containers that are running on those GKE hosts we were just looking at. Navigate back to **Radar -> Containers**
+
+2. Let’s look at the default namespace for the bank-of-anthos cluster. Here you can see the microservices running in containers that are powering this simple application. Your screen should look similar to the screenshot below:
+
+![Alt text for image](/screenshots/preventing-attacks-2.png "Optional title")
+
+3. Let’s dive deeper into the **frontend:v0.5.5** microservice. Click on the associated container. Your screen should look similar to the screenshot below:
+
+![Alt text for image](/screenshots/preventing-attacks-3.png "Optional title")
+
+4. Take some time to review the **Vulnerabilities** page.
+
+![Alt text for image](/screenshots/preventing-attacks-4.png "Optional title")
+
+5. Of the identified OS vulnerabilities, which one has the highest CVE? Do all the identified vulnerabilities contain a fix?
+
+6. Take a look at the **Layers** tab to view the dockerfile that built this image and find where vulnerabilities were introduced.
+
+![Alt text for image](/screenshots/preventing-attacks-6.png "Optional title")
+
+7. In addition to image scanning, runtime visibility and protection; the Prisma Cloud defender also provides Web Application Firewall and API Security
+
+8. To take a look let’s navigate back to **Radars -> Containers** and ensure you are viewing the **bank-of-anthos** app.
+
+![Alt text for image](/screenshots/preventing-attacks-8.png "Optional title")
+
+9. The green firewall log indicates that the front-end microservice is protected by Prisma Cloud.
+
+10. Administrators can define rules to provide web application and api security capabilities to protect web applications. Prisma Cloud supports VM Hosts, Containers, Application Embedded, and function deployment architectures.
+
+![Alt text for image](/screenshots/preventing-attacks-10.png "Optional title")
+
+11. Administrators can define Custom Rules that provide Virtual Patching capabilities to protect against attacks exploiting CVE’s that have not yet been patched. For example check out the log4j blog where you can find more information about custom rules that were created to protect our customers. [Link](https://www.paloaltonetworks.com/blog/prisma-cloud/log-4-shell-vulnerability/)
+
+12. Take a look at some of the attacks the defender has prevented by navigating to **Monitor -> Events -> WAAS for Containers**.
+
+![Alt text for image](/screenshots/preventing-attacks-12.png "Optional title")
+
+Thankfully no major events have occurred yet on the accidentally deployed banking app, however we know Exampli Corp has a bad track record for not securing their apps. Let’s look at some historical data from last holiday season.
+
+Click in the filter bar and select **Date**. Enter Dec 1, 2021 for the **From** date and Jan 31, 2022 for the **To** date.
+
+13. Let’s dive into one of the **OS Command Injection** attacks. Click the **total** value to view the events.
+
+![Alt text for image](/screenshots/preventing-attacks-13.png "Optional title")
+
+14. Select one of the entries and answer the questions below:
+
+What was the result of the attack?
+Was it blocked?
+What was the http method that was used in the attack?
+What container image was attacked?
+
+## Summary \ Resources
+
+The Prisma Cloud team here at Palo Alto sincerely hopes you enjoyed this workshop. Today, organizations need a growing set of capabilities to secure modern cloud applications. Implementing AppSec into your development and security workflows with Prisma Cloud can provide the increased speed and agility your organization needs to implement zero trust throughout the entire development lifecycle. Check out the resources below for more information!
+
+[Live Workshops](https://bridgecrew.io/resource/workshops/)
+
+[DevSecTalks Podcast](https://www.paloaltonetworks.com/devsectalks/)
+
+[Supply Chain Security](https://bridgecrew.io/software-supply-chain-security/)
+
+[Cloud DevSecOps](https://bridgecrew.io/cloud-devsecops/)
+
+[Learn More](https://www.paloaltonetworks.com/prisma/cloud)
+
+##### Sample Git Repositories
+
+[TerraGoat - Vulnerable by design Terraform Infrastructure](https://github.com/bridgecrewio/terragoat)
+
+[Cfngoat - Vulnerable by design Cloudformation Template](https://github.com/bridgecrewio/cfngoat)
+
+[CdkGoat - Vulnerable by design AWS CDK Infrastructure](https://github.com/bridgecrewio/cdkgoat)
+
+[BicepGoat - Vulnerable by design Bicep and ARM Infrastructure](https://github.com/bridgecrewio/bicepgoat)
+
+[KubernetesGoat-Vulnerable by design KubernetesCluster](https://github.com/bridgecrewio/kubernetes-goattest)
+
+[KustomizeGoat - Vulnerable by design Kustomize deployment](https://github.com/bridgecrewio/kustomizegoat)
+
+[SupplyGoat- Vulnerable by design SCA](https://github.com/bridgecrewio/supplygoat)
+
 #### Find and Fix Insecure Infrastructure Code
 
 Let's begin this next exercise by exploring the power of shifting security left with Infrastructure as code
@@ -96,7 +247,6 @@ developers use to secure IaC. With Bridgecrew from Prisma Cloud you can begin le
 the open source tool Checkov for free.
 
 To learn more visit: https://bridgecrew.io/checkov/
-
 
 The first place we will begin is with investigating Exampli Corp's infrastructure code in the company's GitHub repository. 
 
@@ -389,155 +539,5 @@ What is the base OS for this image?
 How many critical vulnerabilities are affecting this image?
 What host machine(s) is this image running on?
 
-## Securing Applications at Runtime
 
-Wait a second, there are critical vulnerabilities in that deployed frontend image! Let’s take a few minutes to investigate all GCP resources that Exampli Corp owns and secure the final phase of the application lifecycle.
-
-Cloud-native applications allow organizations to build and run scalable applications with great agility and resilience. However, they also present unique security challenges.Ensuring applications and services are secure at runtime is a core responsibility for security teams.
-
-The Exampli Corp team needs to take the security of the banking application just as seriously as Bank of Anthos takes the physical security of their banks. Just like physical currency, data must be secured and unauthorized access prevented when possible. In the Cloud, this means ensuring you have visibility on all of your assets, actively investigating suspicious activity, and
-protecting your environment from attacks. Additionally, The Exampli security team needs to ensure they follow all best practices and security frameworks that govern their industry.
-
-In this section, you will explore some use cases for protecting your applications during runtime.
-
-##### Maintaining Visibility
-
-The first step to protecting applications is to gain and maintain comprehensive visibility of your applications and all their associated resources. If Exampli Corp does not have oversight of their cloud environment it is impossible for them to stop emerging threats, respond to incidents, or reduce vulnerabilities. In a modern multi-cloud and hybrid world, applications are broken into different environments across the clouds like VMs, containers, serverless compute architecture types. Maintaining visibility is essential to protecting applications at runtime.
-
-Lets help Exampli Corp get a clear picture of the Bank of Anthos application by using Prisma Cloud’s Radar feature.
-
-1. The Radar feature lets you gain a bird’s eye view to monitor and understand your cloud environment. It helps you to visualize the connectivity between microservices and search for vulnerabilities. Navigate to **Compute -> Radar -> Containers** and select the cluster **bank-of-anthos**.
-
-![Alt text for image](/screenshots/maintaining-visibility-1.png "Optional title")
-
-2. Once you have selected the correct cluster your screen should look similar the the screenshot below:
-
-![Alt text for image](/screenshots/maintaining-visibility-2.png "Optional title")
-
-3. Radar provides a visual depiction of inter- and intra-network connections between containers, apps, and cluster services across your environment. It shows the ports associated with each connection, the direction of traffic flow, and internet accessibility.Take some time to play around with the Radar feature and think through the following questions:
-
-What type of information can you learn by clicking on the nodes?
-How does this visibility help you protect your applications?
-
-##### Investigate Incidents at Runtime
-
-Exampli Corp has adopted Prisma Cloud and maintained consistent visibility on their applications. But seeing your resources does not make them immune to incidents during runtime. Thankfully, Prisma Cloud offers AppSec solutions for the entire lifecycle of your
-applications. By using incident explorer the Exampli Corp Security team gets real-time detection and analysis of all potential threats that violate their security policies. Let's take a look and see if there are any incidents in our cloud environment.
-
-1. Let's begin by navigating to **Monitor -> Runtime -> Incident Explorer**. On this screen we can view suspicious events collected by our runtime and firewall sensors. Take a look around the page and get a feel for the types of incidents being reported.
-
-![Alt text for image](/screenshots/investigate-incidents-at-runtime-1.png "Optional title")
-
-2. Next, click on **Container Models** tab. Here we can view all of our containers and take a deeper look at the forensics to see if there are any security concerns that slipped through the cracks.
-
-![Alt text for image](/screenshots/investigate-incidents-at-runtime-2.png "Optional title")
-
-3. We know that Exampli Corp is getting ready to release the new Bank of Anthos App, so let's search **“gcr.io/bank-of-anthos-ci/frontend:v0.5.5”** in the filter box to see how the containers are looking.
-
-![Alt text for image](/screenshots/investigate-incidents-at-runtime-3.png "Optional title")
-
-4. Great! Now let's click on the microscope icon to take a look at the digital forensics
-
-![Alt text for image](/screenshots/investigate-incidents-at-runtime-4.png "Optional title")
-
-5. Here you can see all the events displayed. Let’s take a deeper look at these events to get some details and see what has been happening with our bank-of-anthos-frontend.
-
-![Alt text for image](/screenshots/investigate-incidents-at-runtime-5.png "Optional title")
-
-6. Spend some time looking through the events and answer the following questions:
-
-What information can be gathered from the events?
-What types of events are being displayed?
-Should we be concerned about any of these events? What action if any should be taken?
-
-
-##### Preventing attacks
-
-One of the most important parts of securing the banking app during runtime is preventing attacks. Bank of Anthos invests significant resources in guaranteeing the security of their physical banks. They have security cameras to log and monitor access, sensors to alert on threats, but most importantly, banks have safes and security guards. In the worst case outcome if all prior controls fail there are physical preventative capabilities to protect the critical assets.
-
-Prisma Cloud provides process level detail and critical forensic information to give both visibility and aid in threat investigations for indicators of compromise. Spend some time reviewing the forensic information Prisma Cloud provides, feel free to look back in time.
-
-1. Next, let’s take a closer look at some containers that are running on those GKE hosts we were just looking at. Navigate back to **Radar -> Containers**
-
-2. Let’s look at the default namespace for the bank-of-anthos cluster. Here you can see the microservices running in containers that are powering this simple application. Your screen should look similar to the screenshot below:
-
-![Alt text for image](/screenshots/preventing-attacks-2.png "Optional title")
-
-3. Let’s dive deeper into the **frontend:v0.5.5** microservice. Click on the associated container. Your screen should look similar to the screenshot below:
-
-![Alt text for image](/screenshots/preventing-attacks-3.png "Optional title")
-
-4. Take some time to review the **Vulnerabilities** page.
-
-![Alt text for image](/screenshots/preventing-attacks-4.png "Optional title")
-
-5. Of the identified OS vulnerabilities, which one has the highest CVE? Do all the identified vulnerabilities contain a fix?
-
-6. Take a look at the **Layers** tab to view the dockerfile that built this image and find where vulnerabilities were introduced.
-
-![Alt text for image](/screenshots/preventing-attacks-6.png "Optional title")
-
-7. In addition to image scanning, runtime visibility and protection; the Prisma Cloud defender also provides Web Application Firewall and API Security
-
-8. To take a look let’s navigate back to **Radars -> Containers** and ensure you are viewing the **bank-of-anthos** app.
-
-![Alt text for image](/screenshots/preventing-attacks-8.png "Optional title")
-
-9. The green firewall log indicates that the front-end microservice is protected by Prisma Cloud.
-
-10. Administrators can define rules to provide web application and api security capabilities to protect web applications. Prisma Cloud supports VM Hosts, Containers, Application Embedded, and function deployment architectures.
-
-![Alt text for image](/screenshots/preventing-attacks-10.png "Optional title")
-
-11. Administrators can define Custom Rules that provide Virtual Patching capabilities to protect against attacks exploiting CVE’s that have not yet been patched. For example check out the log4j blog where you can find more information about custom rules that were created to protect our customers. [Link](https://www.paloaltonetworks.com/blog/prisma-cloud/log-4-shell-vulnerability/)
-
-12. Take a look at some of the attacks the defender has prevented by navigating to **Monitor -> Events -> WAAS for Containers**.
-
-![Alt text for image](/screenshots/preventing-attacks-12.png "Optional title")
-
-Thankfully no major events have occurred yet on the accidentally deployed banking app, however we know Exampli Corp has a bad track record for not securing their apps. Let’s look at some historical data from last holiday season.
-
-Click in the filter bar and select **Date**. Enter Dec 1, 2021 for the **From** date and Jan 31, 2022 for the **To** date.
-
-13. Let’s dive into one of the **OS Command Injection** attacks. Click the **total** value to view the events.
-
-![Alt text for image](/screenshots/preventing-attacks-13.png "Optional title")
-
-14. Select one of the entries and answer the questions below:
-
-What was the result of the attack?
-Was it blocked?
-What was the http method that was used in the attack?
-What container image was attacked?
-
-
-## Summary \ Resources
-
-The Prisma Cloud team here at Palo Alto sincerely hopes you enjoyed this workshop. Today, organizations need a growing set of capabilities to secure modern cloud applications. Implementing AppSec into your development and security workflows with Prisma Cloud can provide the increased speed and agility your organization needs to implement zero trust throughout the entire development lifecycle. Check out the resources below for more information!
-
-[Live Workshops](https://bridgecrew.io/resource/workshops/)
-
-[DevSecTalks Podcast](https://www.paloaltonetworks.com/devsectalks/)
-
-[Supply Chain Security](https://bridgecrew.io/software-supply-chain-security/)
-
-[Cloud DevSecOps](https://bridgecrew.io/cloud-devsecops/)
-
-[Learn More](https://www.paloaltonetworks.com/prisma/cloud)
-
-##### Sample Git Repositories
-
-[TerraGoat - Vulnerable by design Terraform Infrastructure](https://github.com/bridgecrewio/terragoat)
-
-[Cfngoat - Vulnerable by design Cloudformation Template](https://github.com/bridgecrewio/cfngoat)
-
-[CdkGoat - Vulnerable by design AWS CDK Infrastructure](https://github.com/bridgecrewio/cdkgoat)
-
-[BicepGoat - Vulnerable by design Bicep and ARM Infrastructure](https://github.com/bridgecrewio/bicepgoat)
-
-[KubernetesGoat-Vulnerable by design KubernetesCluster](https://github.com/bridgecrewio/kubernetes-goattest)
-
-[KustomizeGoat - Vulnerable by design Kustomize deployment](https://github.com/bridgecrewio/kustomizegoat)
-
-[SupplyGoat- Vulnerable by design SCA](https://github.com/bridgecrewio/supplygoat)
 
