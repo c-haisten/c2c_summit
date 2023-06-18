@@ -87,9 +87,10 @@ Please feel free to explore the other alerts and CVE's for more insight.
 
 ![Alt text for image](/screenshots/discover-risky-assets-10.png "Optional title")
 
-Well done, you helped identify alerts and vulnerabilities present in Exampli Corp's assets! As we have found there are several alerts and vulnerabilities associated with these GKE hosts, fortunately Exampli Corps has integrated Prisma Cloud with the organization's Jira instance. With this integration configured the appropriate system and application owners have been notified by email and Jira Issues have been created to track their remediation automatically.
+Well done, you helped identify alerts and vulnerabilities present in Exampli's GKE cluster. Fortunately, Exampli Corps has integrated Prisma Cloud with the organization's Jira and Slack instances. With this integration configured the appropriate system and application owners have been notified and Jira Issues have been created to track their remediation automatically.
 
-Now that we have learned about some vulnerabilties and misconfigurations on Exampli's GKE cluster let's learn a little bit more information about the applications running on them!
+Now that we have learned about some vulnerabilties and misconfigurations on Exampli's GKE cluster let's learn a little bit more information about the containerized applications running on them!
+
 ## Securing Applications at Runtime
 
 Wait a second, there are critical vulnerabilities in that deployed frontend image! Let’s take a few minutes to investigate all GCP resources that Exampli Corp owns and secure the final phase of the application lifecycle.
