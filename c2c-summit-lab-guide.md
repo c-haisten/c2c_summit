@@ -96,7 +96,7 @@ protecting your environment from attacks. Additionally, The Exampli security tea
 
 In this section, you will explore some use cases for protecting your applications during runtime.
 
-##### Maintaining Visibility
+#### Maintaining Visibility
 
 The first step to protecting applications is to gain and maintain comprehensive visibility of your applications and all their associated resources. If Exampli Corp does not have oversight of their cloud environment it is impossible for them to stop emerging threats, respond to incidents, or reduce vulnerabilities. In a modern multi-cloud and hybrid world, applications are broken into different environments across the clouds like VMs, containers, serverless compute architecture types. Maintaining visibility is essential to protecting applications at runtime.
 
