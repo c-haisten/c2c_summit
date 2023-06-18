@@ -42,7 +42,7 @@ below :
 
 ### Exercise
 
-#### Discover risky assets
+#### Discover Risky Assets
 
 Let's begin the lab by exploring Exampli Corp's existing assets to see if any alerts or vulnerabilities have been detected.
 
