@@ -20,7 +20,7 @@ adopting shift left security from code to cloud. Once in production Exampli Corp
 and security teams continue to leverage Prisma Cloud to monitor and protect runtime
 resources, reduce the attack surface, and enforce least privilege.
 
-Will The Exampli Corp team take the time to build a secure app? Or will the stress of
+Will the Exampli Corp team take the time to build a secure app? Or will the stress of
 completing the Bank of Anthos app in time for deadlines lead to mistakes?
 
 ### Resources
