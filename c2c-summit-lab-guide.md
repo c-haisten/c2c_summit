@@ -10,18 +10,11 @@ context.
 
 ### Scenario
 
-The Exampli Corp, a mock corporation, product group is rushing to finish a banking app for
-their customer Bank of Anthos in time for the holiday season when spending patterns spike.
-Up against unrealistic deadlines the development and infrastructure teams are working
-around the clock to get their app built, tested, and released to hit their deadlines.
+The Exampli Corp, a mock corporation, is rushing to finish a new mobile banking app for their customers in time for the holiday season when spending patterns spike. Up against unrealistic deadlines the development and infrastructure teams are working around the clock to get their app built, tested, and released to hit their deadlines.
 
-Fortunately, Exampli Corp recently integrated Prisma Cloud into their development lifecycle
-adopting shift left security from code to cloud. Once in production Exampli Corps operations
-and security teams continue to leverage Prisma Cloud to monitor and protect runtime
-resources, reduce the attack surface, and enforce least privilege.
+Fortunately, Exampli Corp recently integrated Prisma Cloud into their development lifecycle adopting security from code to cloud. Once in production Exampli Corps operations and security teams continue to leverage Prisma Cloud to monitor and protect runtime resources, reduce the attack surface, and enforce least privilege.
 
-Will the Exampli Corp team take the time to build a secure app? Or will the stress of
-completing the Bank of Anthos app in time for deadlines lead to mistakes?
+Will the Exampli Corp team take the time to build a secure app? Or will the stress of completing the Bank of Anthos app in time for deadlines lead to mistakes?
 
 ### Resources
 
