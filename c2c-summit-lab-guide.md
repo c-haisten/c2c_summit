@@ -149,7 +149,9 @@ PLACEHOLDER FOR SCREEN CAPTURE
 
 ##### Investigate for Incidents
 
-Exampli Corp has adopted Prisma Cloud and maintained consistent visibility on their applications. But seeing your resources does not make them immune to incidents during runtime. By using incident explorer the Exampli Corp Security team gets real-time detection and analysis of all potential threats that violate their security policies. Let's take a look and see if there are any incidents in Exampli Corp's cloud environment.
+Exampli Corp has adopted Prisma Cloud and maintained consistent visibility on their applications. But seeing your resources does not make them immune to incidents during runtime. By using incident explorer the Exampli Corp Security team gets real-time detection and analysis of all potential threats that violate their security policies.
+
+Lets begin by looking at the AI powered modeling Prisma Cloud provides. Process level detail and critical forensic information are modeled to give both visibility and aid in investigations for indicators of compromise. Spend some time reviewing the forensic information Prisma Cloud provides, feel free to look back in time.
 
 1. Let's begin by navigating to **Monitor -> Runtime -> Incident Explorer**. On this screen we can view suspicious events collected get a feel for the types of incidents being reported.
 
@@ -181,11 +183,9 @@ Should we be concerned about any of these events? What action if any should be t
 
 One of the most important parts of securing the banking app during runtime is preventing attacks. Like actual banks that have preventative capabilities such as safes and security guards, Exampli Corp uses Prisma Cloud defenders to prevent attacks from happening in real-time when all  prior controls fail.
 
-Lets begin by looking at some the modelling Prisma Cloud provides. Process level detail and critical forensic information are modeled to give both visibility and aid in investigations for indicators of compromise. Spend some time reviewing the forensic information Prisma Cloud provides, feel free to look back in time.
+1. Navigate back to **Radar -> Containers**
 
-1. Next, take a closer look at the containers that are running on the Bank of Anthos GKE hosts.  Navigate back to **Radar -> Containers**
-
-2. Let’s look at the default namespace for the bank-of-anthos cluster. Here you can see the microservices running in containers that are powering this simple application. Your screen should look similar to the screenshot below:
+2. Ensure you are on the default namespace for the bank-of-anthos cluster.  Your screen should look similar to the screenshot below:
 
 ![Alt text for image](/screenshots/preventing-attacks-2.png "Optional title")
 
