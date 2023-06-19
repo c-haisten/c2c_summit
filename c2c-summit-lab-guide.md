@@ -35,7 +35,7 @@ below :
 
 ### Exercise
 
-#### Discover Risky Assets
+#### Gain Visibility and Control of Exampli Corp’s Cloud Assets
 
 Let's begin the lab by exploring Exampli Corp's existing assets to see if any alerts or vulnerabilities have been detected.
 
@@ -90,11 +90,9 @@ https://docs.paloaltonetworks.com/prisma/prisma-cloud/prisma-cloud-admin/configu
 
 Now that we have learned about some vulnerabilties and misconfigurations on Exampli's GKE cluster let's learn a little bit more information about the containerized applications running on them!
 
-## Securing Applications at Runtime
+### Protecting Exampli’s Critical Applications
 
-Wait a second, there are critical vulnerabilities in that deployed frontend image! Let’s take a few minutes to investigate all GCP resources that Exampli Corp owns and secure the final phase of the application lifecycle.
-
-Cloud-native applications allow organizations to build and run scalable applications with great agility and resilience. However, they also present unique security challenges.Ensuring applications and services are secure at runtime is a core responsibility for security teams.
+Let’s take a few minutes to take a deeper look at the Bank of Anthos application that runs on the GKE cluster we were looking at earlier.
 
 The Exampli Corp team needs to take the security of the banking application just as seriously as Bank of Anthos takes the physical security of their banks. Just like physical currency, data must be secured and unauthorized access prevented when possible. In the Cloud, this means ensuring you have visibility on all of your assets, actively investigating suspicious activity, and
 protecting your environment from attacks. Additionally, The Exampli security team needs to ensure they follow all best practices and security frameworks that govern their industry.
@@ -241,7 +239,7 @@ The Prisma Cloud team here at Palo Alto sincerely hopes you enjoyed this worksho
 
 [SupplyGoat- Vulnerable by design SCA](https://github.com/bridgecrewio/supplygoat)
 
-#### Find and Fix Insecure Infrastructure Code
+#### Prevent Future Risk by Shifting Security Left
 
 Let's begin this next exercise by exploring the power of shifting security left with Infrastructure as code
 scanning. As infrastructure is being defined as code, security must be integrated with the
