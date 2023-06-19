@@ -141,8 +141,7 @@ What information can be gathered from the events?
 What types of events are being displayed?
 Should we be concerned about any of these events? What action if any should be taken?
 
-
-##### Preventing attacks
+#### Preventing attacks
 
 One of the most important parts of securing the banking app during runtime is preventing attacks. Bank of Anthos invests significant resources in guaranteeing the security of their physical banks. They have security cameras to log and monitor access, sensors to alert on threats, but most importantly, banks have safes and security guards. In the worst case outcome if all prior controls fail there are physical preventative capabilities to protect the critical assets.
 
@@ -200,36 +199,6 @@ What was the result of the attack?
 Was it blocked?
 What was the http method that was used in the attack?
 What container image was attacked?
-
-## Summary \ Resources
-
-The Prisma Cloud team here at Palo Alto sincerely hopes you enjoyed this workshop. Today, organizations need a growing set of capabilities to secure modern cloud applications. Implementing AppSec into your development and security workflows with Prisma Cloud can provide the increased speed and agility your organization needs to implement zero trust throughout the entire development lifecycle. Check out the resources below for more information!
-
-[Live Workshops](https://bridgecrew.io/resource/workshops/)
-
-[DevSecTalks Podcast](https://www.paloaltonetworks.com/devsectalks/)
-
-[Supply Chain Security](https://bridgecrew.io/software-supply-chain-security/)
-
-[Cloud DevSecOps](https://bridgecrew.io/cloud-devsecops/)
-
-[Learn More](https://www.paloaltonetworks.com/prisma/cloud)
-
-##### Sample Git Repositories
-
-[TerraGoat - Vulnerable by design Terraform Infrastructure](https://github.com/bridgecrewio/terragoat)
-
-[Cfngoat - Vulnerable by design Cloudformation Template](https://github.com/bridgecrewio/cfngoat)
-
-[CdkGoat - Vulnerable by design AWS CDK Infrastructure](https://github.com/bridgecrewio/cdkgoat)
-
-[BicepGoat - Vulnerable by design Bicep and ARM Infrastructure](https://github.com/bridgecrewio/bicepgoat)
-
-[KubernetesGoat-Vulnerable by design KubernetesCluster](https://github.com/bridgecrewio/kubernetes-goattest)
-
-[KustomizeGoat - Vulnerable by design Kustomize deployment](https://github.com/bridgecrewio/kustomizegoat)
-
-[SupplyGoat- Vulnerable by design SCA](https://github.com/bridgecrewio/supplygoat)
 
 #### Prevent Future Risk by Shifting Security Left
 
@@ -406,9 +375,7 @@ Let's begin by exploring the power of shifting security left with Infrastructure
 
 ### Software Composition Analysis:
 
-
 1. Login to [Prisma Cloud](https://app4.prismacloud.io/auth/signin).
-
 
 2. Use the credentials provided by your Instructor to authenticate.
 
@@ -495,44 +462,33 @@ Here we can quickly identify valuable information like the package version, lice
 
 Now that you have helped to protect the Bank of Anthos banking app Software Supply Chain, let’s take a look at the recent activity of the Exampli Corp developers.
 
-#### Deploy Secure Applications
+## Summary \ Resources
 
-We now know Exampli Corp’s images are vulnerable so we will walk through the steps on how to create a Vulnerability and Compliance rule below.
+The Prisma Cloud team here at Palo Alto sincerely hopes you enjoyed this workshop. Today, organizations need a growing set of capabilities to secure modern cloud applications. Implementing AppSec into your development and security workflows with Prisma Cloud can provide the increased speed and agility your organization needs to implement zero trust throughout the entire development lifecycle. Check out the resources below for more information!
 
-Prisma Cloud supports automation workflows with GitHub and Jenkins to integrate security in the build pipeline to scan application images, review results, and pass/fail builds based on findings.
+[Live Workshops](https://bridgecrew.io/resource/workshops/)
 
+[DevSecTalks Podcast](https://www.paloaltonetworks.com/devsectalks/)
 
-1. Authorized administrators can implement Prisma Cloud image scanning in your CI pipeline. In Prisma Cloud, vulnerability rules can be defined to raise alerts or fail builds when code repositories scanned in the CI process have vulnerabilities. View the vulnerability rule for the Bank of Anthos frontend image by going to **Compute -> Defend -> Vulnerabilities -> CI** and selecting the **bank-of-anthos-frontend** under **Rule name**.
+[Supply Chain Security](https://bridgecrew.io/software-supply-chain-security/)
 
-![Alt text for image](/screenshots/deploy-secure-applications-1.png "Optional title")
+[Cloud DevSecOps](https://bridgecrew.io/cloud-devsecops/)
 
-2. Here authorized administrators can edit rules to alert on and block builds based on rules they define. This can be a powerful integration to ensure that when applications hit runtime they are configured securely and that vulnerabilities are minimized.
+[Learn More](https://www.paloaltonetworks.com/prisma/cloud)
 
-![Alt text for image](/screenshots/deploy-secure-applications-2.png "Optional title")
+##### Sample Git Repositories
 
-3. In addition to Vulnerability rules, Prisma Cloud comes standard with a number of out of the box compliance policies. However, many organizations require flexibility in compliance. Prisma Cloud allows you to add custom compliance rules by navigating to **Compute** and clicking on **Compliance** under the **Defend** section.
+[TerraGoat - Vulnerable by design Terraform Infrastructure](https://github.com/bridgecrewio/terragoat)
 
-![Alt text for image](/screenshots/deploy-secure-applications-3.png "Optional title")
+[Cfngoat - Vulnerable by design Cloudformation Template](https://github.com/bridgecrewio/cfngoat)
 
-4. Here you can see all code repository compliance rules. On this page, authorized administrators are able to add and edit custom rules. To view the **bank-of-anthos-frontend** compliance rule click on the rule name.
+[CdkGoat - Vulnerable by design AWS CDK Infrastructure](https://github.com/bridgecrewio/cdkgoat)
 
-![Alt text for image](/screenshots/deploy-secure-applications-4.png "Optional title")
+[BicepGoat - Vulnerable by design Bicep and ARM Infrastructure](https://github.com/bridgecrewio/bicepgoat)
 
-5. Here you can create custom rules that are tailored to your own business needs, standards, and organizational policies. These custom rules can help reduce the attack surface at runtime and help reduce the workload on SecOps.
+[KubernetesGoat-Vulnerable by design KubernetesCluster](https://github.com/bridgecrewio/kubernetes-goattest)
 
-6. Now, let's take a look at some of the image information about deployed images by clicking **Monitor -> Vulnerabilities -> Images -> Deployed**
+[KustomizeGoat - Vulnerable by design Kustomize deployment](https://github.com/bridgecrewio/kustomizegoat)
 
-![Alt text for image](/screenshots/deploy-secure-applications-6.png "Optional title")
-
-7. Let’s take a look at the **‘bank-of-anthos-ci/frontend’** image under the **Repository** column. To view the vulnerable image simply click on the row. Your screen should look similar to the one below:
-
-![Alt text for image](/screenshots/deploy-secure-applications-7.png "Optional title")
-
-8. Explore the information found on the summary page, and answer the following questions:
-
-What is the base OS for this image?
-How many critical vulnerabilities are affecting this image?
-What host machine(s) is this image running on?
-
-
+[SupplyGoat- Vulnerable by design SCA](https://github.com/bridgecrewio/supplygoat)
 
