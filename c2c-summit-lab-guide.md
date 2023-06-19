@@ -129,9 +129,19 @@ Let's help Exampli Corp get a clear picture of the application running on the vu
 What type of information can you learn by clicking on the nodes?
 How does this visibility help you protect your applications?
 
-4. Next, let's take a look at the frontend container to learn more about it. On the Radar view find the front end container and click on it. Your screen should look similar to the screen capture below :
+4. Let’s dive deeper into the **frontend:v0.5.5** microservice. Click on the associated container. Your screen should look similar to the screenshot below:
 
-PLACEHOLDER FOR SCREEN SHOT
+![Alt text for image](/screenshots/preventing-attacks-3.png "Optional title")
+
+5. Take some time to review the **Vulnerabilities** page.
+
+![Alt text for image](/screenshots/preventing-attacks-4.png "Optional title")
+
+6. Of the identified OS vulnerabilities, which one has the highest CVE? Do all the identified vulnerabilities contain a fix?
+
+7. Take a look at the **Layers** tab to view the dockerfile that built this image and find where vulnerabilities were introduced.
+
+![Alt text for image](/screenshots/preventing-attacks-6.png "Optional title")
 
 ##### Investigate Incidents at Runtime
 
@@ -175,19 +185,6 @@ Prisma Cloud provides process level detail and critical forensic information to 
 
 ![Alt text for image](/screenshots/preventing-attacks-2.png "Optional title")
 
-3. Let’s dive deeper into the **frontend:v0.5.5** microservice. Click on the associated container. Your screen should look similar to the screenshot below:
-
-![Alt text for image](/screenshots/preventing-attacks-3.png "Optional title")
-
-4. Take some time to review the **Vulnerabilities** page.
-
-![Alt text for image](/screenshots/preventing-attacks-4.png "Optional title")
-
-5. Of the identified OS vulnerabilities, which one has the highest CVE? Do all the identified vulnerabilities contain a fix?
-
-6. Take a look at the **Layers** tab to view the dockerfile that built this image and find where vulnerabilities were introduced.
-
-![Alt text for image](/screenshots/preventing-attacks-6.png "Optional title")
 
 7. In addition to image scanning, runtime visibility and protection; the Prisma Cloud defender also provides Web Application Firewall and API Security
 
