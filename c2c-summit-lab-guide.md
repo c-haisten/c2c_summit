@@ -92,13 +92,13 @@ Now that we have learned about some vulnerabilties and misconfigurations on Exam
 
 ### Protecting Exampli’s Critical Applications
 
-#### Maintaining Visibility
+#### Visualize Applications
 
 The first step to protecting applications is to gain and maintain comprehensive visibility of your applications and all their associated resources. If Exampli Corp does not have oversight of their cloud environment it is impossible for them to stop emerging threats, respond to incidents, or reduce vulnerabilities. In a modern multi-cloud and hybrid world, applications are broken into different environments across the clouds like VMs, containers, serverless compute architecture types. Maintaining visibility is essential to protecting applications at runtime.
 
-Let's help Exampli Corp get a clear picture of the application that was running on the vulnerable GKE cluster we were looking at in the previous section. To do so let's take a look at the microservices running the Bank of Anthos application by using Prisma Cloud’s Radar feature.
+Let's help Exampli Corp get a clear picture of the application running on the vulnerable GKE cluster from the previous section.  Start by taking a look at the microservices running the Bank of Anthos application using Prisma Cloud’s Radar feature.
 
-1. The Radar feature lets you gain a bird’s eye view to monitor and understand your cloud environment. It helps you to visualize the connectivity between microservices and search for vulnerabilities. Navigate to **Compute -> Radar -> Containers** and select the cluster **bank-of-anthos**.
+1. The Radar feature lets you gain a bird’s eye view to monitor and understand your cloud applications. It helps you visualize the connectivity between microservices and search for vulnerabilities. Navigate to **Compute -> Radar -> Containers** and select the cluster **bank-of-anthos**.
 
 ![Alt text for image](/screenshots/maintaining-visibility-1.png "Optional title")
 
@@ -106,10 +106,14 @@ Let's help Exampli Corp get a clear picture of the application that was running 
 
 ![Alt text for image](/screenshots/maintaining-visibility-2.png "Optional title")
 
-3. Radar provides a visual depiction of inter- and intra-network connections between containers, apps, and cluster services across your environment. It shows the ports associated with each connection, the direction of traffic flow, and internet accessibility.Take some time to play around with the Radar feature and think through the following questions:
+3. Radar provides a visual depiction of the connections between containers, apps, and cluster services across your environment. It shows the ports associated with each connection, the direction of traffic flow, and internet accessibility. Take some time to play around with the Radar feature and think through the following questions:
 
 What type of information can you learn by clicking on the nodes?
 How does this visibility help you protect your applications?
+
+4. Next, let's take a look at the frontend container to learn more about it. On the Radar view find the front end container and click on it. Your screen should look similar to the screen capture below :
+
+PLACEHOLDER FOR SCREEN SHOT
 
 ##### Investigate Incidents at Runtime
 
