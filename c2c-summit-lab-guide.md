@@ -20,10 +20,24 @@ Will the Exampli Corp team take the time to build a secure app? Or will the stre
 
 Vulnerable IaC :
 
-In this lab we leverage some intentionally vulnerable IaC. To learn more about the project and
+In this lab we leverage some intentionally vulnerable IaC. To learn more about the projects and
 its contributors visit the link below:
 
-- https://github.com/bridgecrewio/terragoat
+##### Sample Git Repositories
+
+[TerraGoat - Vulnerable by design Terraform Infrastructure](https://github.com/bridgecrewio/terragoat)
+
+[Cfngoat - Vulnerable by design Cloudformation Template](https://github.com/bridgecrewio/cfngoat)
+
+[CdkGoat - Vulnerable by design AWS CDK Infrastructure](https://github.com/bridgecrewio/cdkgoat)
+
+[BicepGoat - Vulnerable by design Bicep and ARM Infrastructure](https://github.com/bridgecrewio/bicepgoat)
+
+[KubernetesGoat-Vulnerable by design KubernetesCluster](https://github.com/bridgecrewio/kubernetes-goattest)
+
+[KustomizeGoat - Vulnerable by design Kustomize deployment](https://github.com/bridgecrewio/kustomizegoat)
+
+[SupplyGoat- Vulnerable by design SCA](https://github.com/bridgecrewio/supplygoat)
 
 Bank of Anthos Application :
 
@@ -35,7 +49,7 @@ below :
 
 ### Exercise
 
-#### Gain Visibility and Control of Exampli Corp’s Cloud Assets
+#### Gain Visibility and Control of Cloud Assets
 
 Let's begin the lab by exploring Exampli Corp's existing assets to see if any alerts or vulnerabilities have been detected by Prisma Cloud.
 
@@ -90,9 +104,9 @@ https://docs.paloaltonetworks.com/prisma/prisma-cloud/prisma-cloud-admin/configu
 
 Now that we have learned about some vulnerabilties and misconfigurations on Exampli's GKE cluster let's learn a little bit more information about the containerized applications running on them!
 
-### Protecting Exampli’s Critical Applications
+### Protect Critical Applications
 
-#### Visualize Applications
+#### Visualize Applications and Establish Context
 
 The first step to protecting applications is to gain and maintain comprehensive visibility of your applications and all their associated resources. If Exampli Corp does not have oversight of their cloud environment it is impossible for them to stop emerging threats, respond to incidents, or reduce vulnerabilities. In a modern multi-cloud and hybrid world, applications are broken into different environments across the clouds like VMs, containers, serverless compute architecture types. Maintaining visibility is essential to protecting applications at runtime.
 
@@ -204,7 +218,7 @@ Was it blocked?
 What was the http method that was used in the attack?
 What container image was attacked?
 
-#### Prevent Future Risk by Shifting Security Left
+#### Prevent Future Risk 
 
 Let's begin this next exercise by exploring the power of shifting security left with Infrastructure as code
 scanning. As infrastructure is being defined as code, security must be integrated with the
@@ -479,20 +493,3 @@ The Prisma Cloud team here at Palo Alto sincerely hopes you enjoyed this worksho
 [Cloud DevSecOps](https://bridgecrew.io/cloud-devsecops/)
 
 [Learn More](https://www.paloaltonetworks.com/prisma/cloud)
-
-##### Sample Git Repositories
-
-[TerraGoat - Vulnerable by design Terraform Infrastructure](https://github.com/bridgecrewio/terragoat)
-
-[Cfngoat - Vulnerable by design Cloudformation Template](https://github.com/bridgecrewio/cfngoat)
-
-[CdkGoat - Vulnerable by design AWS CDK Infrastructure](https://github.com/bridgecrewio/cdkgoat)
-
-[BicepGoat - Vulnerable by design Bicep and ARM Infrastructure](https://github.com/bridgecrewio/bicepgoat)
-
-[KubernetesGoat-Vulnerable by design KubernetesCluster](https://github.com/bridgecrewio/kubernetes-goattest)
-
-[KustomizeGoat - Vulnerable by design Kustomize deployment](https://github.com/bridgecrewio/kustomizegoat)
-
-[SupplyGoat- Vulnerable by design SCA](https://github.com/bridgecrewio/supplygoat)
-
