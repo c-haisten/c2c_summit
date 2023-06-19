@@ -143,11 +143,15 @@ How does this visibility help you protect your applications?
 
 ![Alt text for image](/screenshots/preventing-attacks-6.png "Optional title")
 
-##### Investigate Incidents at Runtime
+8. Find the file that added the most severe vulnerabilities and open it up by clicking on it to learn more about specifically what CVEs were added. Your screen should look similar to the screen capture below :
+
+PLACEHOLDER FOR SCREEN CAPTURE
+
+##### Investigate for Incidents
 
 Exampli Corp has adopted Prisma Cloud and maintained consistent visibility on their applications. But seeing your resources does not make them immune to incidents during runtime. By using incident explorer the Exampli Corp Security team gets real-time detection and analysis of all potential threats that violate their security policies. Let's take a look and see if there are any incidents in Exampli Corp's cloud environment.
 
-1. Let's begin by navigating to **Monitor -> Runtime -> Incident Explorer**. On this screen we can view suspicious events collected by our runtime and firewall sensors. Take a look around the page and get a feel for the types of incidents being reported.
+1. Let's begin by navigating to **Monitor -> Runtime -> Incident Explorer**. On this screen we can view suspicious events collected get a feel for the types of incidents being reported.
 
 ![Alt text for image](/screenshots/investigate-incidents-at-runtime-1.png "Optional title")
 
@@ -175,16 +179,15 @@ Should we be concerned about any of these events? What action if any should be t
 
 #### Preventing attacks
 
-One of the most important parts of securing the banking app during runtime is preventing attacks. Bank of Anthos invests significant resources in guaranteeing the security of their physical banks. They have security cameras to log and monitor access, sensors to alert on threats, but most importantly, banks have safes and security guards. In the worst case outcome if all prior controls fail there are physical preventative capabilities to protect the critical assets.
+One of the most important parts of securing the banking app during runtime is preventing attacks. Like actual banks that have preventative capabilities such as safes and security guards, Exampli Corp uses Prisma Cloud defenders to prevent attacks from happening in real-time when all  prior controls fail.
 
-Prisma Cloud provides process level detail and critical forensic information to give both visibility and aid in threat investigations for indicators of compromise. Spend some time reviewing the forensic information Prisma Cloud provides, feel free to look back in time.
+Lets begin by looking at some the modelling Prisma Cloud provides. Process level detail and critical forensic information are modeled to give both visibility and aid in investigations for indicators of compromise. Spend some time reviewing the forensic information Prisma Cloud provides, feel free to look back in time.
 
-1. Next, let’s take a closer look at some containers that are running on those GKE hosts we were just looking at. Navigate back to **Radar -> Containers**
+1. Next, take a closer look at the containers that are running on the Bank of Anthos GKE hosts.  Navigate back to **Radar -> Containers**
 
 2. Let’s look at the default namespace for the bank-of-anthos cluster. Here you can see the microservices running in containers that are powering this simple application. Your screen should look similar to the screenshot below:
 
 ![Alt text for image](/screenshots/preventing-attacks-2.png "Optional title")
-
 
 7. In addition to image scanning, runtime visibility and protection; the Prisma Cloud defender also provides Web Application Firewall and API Security
 
