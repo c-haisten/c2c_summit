@@ -244,7 +244,7 @@ Exampli Corp has adopted Prisma Cloud and maintained consistent visibility on th
 
 3. Take a look at the **Account Manipulation** category underneath the **Persistence** column and click on it. You screen should look similar to the capture below :
 
-PLACEHOLDER FOR SCREENSHOT - mitre-account
+![image](https://github.com/c-haisten/c2c_summit/assets/98335592/75a2de99-2361-4d93-a805-71c4c8bd7bf6)
 
 4. Prisma Cloud provides a summary of findings associated with Account Manipulation and organizes for administrators to use for investigations and remediation efforts. For this particular attack method we can view the description of Account Manipulation according to Mitre.  
 
@@ -254,6 +254,15 @@ PLACEHOLDER FOR SCREENSHOT - mitre-account
 
 ![image](https://github.com/c-haisten/c2c_summit/assets/98335592/43faa08c-17ae-48e9-aef8-c6c7eacd13ab)
 
+6. Scroll to the bottom of the page to learn more information about the container and audit details.
+
+![image](https://github.com/c-haisten/c2c_summit/assets/98335592/c99fd419-5d7b-4abd-8d0e-9373d8c3e1ec)
+
+7. Are you able to discover additional findings associated with Exampli's GKE hosts? Feel free to exploe other attack methods and findings.
+
+There are many capabilities that Prisma Cloud can deliver when protecting applications that are not covered in this lab including but not limitied to Wep App and API Security. To learn more about how Primsa Cloud can protect application APIsvisit this page. (https://www.paloaltonetworks.com/prisma/cloud/web-application-API-security)
+
+The final section of the lab will cover concepts of reducing risk at runtime by finding and fixing insecure infrastructure code and identifying insecure software packages early in the development lifecycle. In this section you will investigate insecure infrastructure code as well as investigate Exampli Corps code supply chain.
 
 #### Prevent Future Risk 
 
