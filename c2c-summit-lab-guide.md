@@ -200,44 +200,43 @@ PLACEHOLDER FOR SCREENSHOT - Foresnic Model
 
 ![Alt text for image](/screenshots/preventing-attacks-3.png "Optional title")
 
-2. Next, click on **Runtime** tab on the summary view. Here we can view highlights from the container's behavior and see if there are any security concerns with what the container is doing.
+6. Next, click on **Runtime** tab on the summary view. Here we can view highlights from the container's behavior and see if there are any security concerns with what the container is doing.
 
 PLACEHOLDER FOR SCREENSHOT - Runtime Events
 
-#### Investigate for Incidents
-
-Exampli Corp has adopted Prisma Cloud and maintained consistent visibility on their applications. But seeing your resources does not make them immune to incidents during runtime. By using incident explorer the Exampli Corp Security team gets real-time detection and analysis of all potential threats that violate their security policies.
-
-Lets begin by looking at the AI powered modeling Prisma Cloud provides. Process level detail and critical forensic information are modeled to give both visibility and aid in investigations for indicators of compromise. Spend some time reviewing the forensic information Prisma Cloud provides, feel free to look back in time.
-
-1. Let's begin by navigating to **Monitor -> Runtime -> Incident Explorer**. On this screen we can view suspicious events collected get a feel for the types of incidents being reported.
-
-![Alt text for image](/screenshots/investigate-incidents-at-runtime-1.png "Optional title")
-
-2. On this screen you will find a summarized list of findings from the defender including behavior that is not in the container's model. Your screen should look similar to the screen capture below :
+7. On this screen you will find a summarized list of findings from the defender including behavior that is not in the container's model. Your screen should look similar to the screen capture below :
 
 PLACEHOLDER FOR SCREENSHOT - runtime-summary
 
-3. Find the audit finding of a foriegn binary execution of tcpdump and click on it. If you have trouble finding it you can type tcpdump in the search bar at the top of the UI.
+8. Find the audit finding of a foriegn binary execution of tcpdump and click on it. If you have trouble finding it you can type tcpdump in the search bar at the top of the UI.
 
 PLACEHOLDER FOR SCREENSHOT - runtime-summary-1
 
 PLACEHOLDER FOR SCREENSHOT - runtime-summary-filter
 
-4. This view provides an expanded understanding of the finding. We can see that Prisma Cloud alerted on this finding due to the default rule to alert on suspicious behavior. Administrators can configure their own rules alert on or block malicious activity.
+9. This view provides an expanded understanding of the finding. We can see that Prisma Cloud alerted on this finding due to the default rule to alert on suspicious behavior. Administrators can configure their own rules alert on or block malicious activity.
 
-5. Creating rules to defend applications is easy in Prisma Cloud. Use the navigation bar on the left hand side of the UI and select Compute -> Defend -> Runtime.
+10. Creating rules to defend applications is easy in Prisma Cloud. Use the navigation bar on the left hand side of the UI and select Compute -> Defend -> Runtime.
 
 PLACEHOLDER FOR SCREENSHOT - runtime-rules
 
-6. On this page administrators can configure rules that make sense for their applications. There is a great deal of granularity given to Prisma Cloud administrators to configure allowed process, networking, and file system actitivies. Prisma Cloud defenders are also integrated with Palo Alto Network's WildFire anti-malware service allowing for the blocking of malware found on the application.
+11. On this page administrators can configure rules that make sense for their applications. There is a great deal of granularity given to Prisma Cloud administrators to configure allowed process, networking, and file system actitivies. Prisma Cloud defenders are also integrated with Palo Alto Network's WildFire anti-malware service allowing for the blocking of malware found on the application.
 
 PLACEHOLDER FOR SCREENSHOT - runtime-rules-blocking
 
-**Feel free to explore the different pages, because this is a lab you will have limited permissions are not able to edit or create anyrules.**
+**Feel free to explore the different pages, because this is a lab you will have limited permissions and are not able to edit or create rules.**
 
 For more information about runtime rules and protection from Prisma Cloud check out our public documentation here. (https://docs.paloaltonetworks.com/prisma/prisma-cloud/prisma-cloud-admin-compute/runtime_defense/runtime_defense_containers)
 
+In addition to providing visibility, context, and protection for applications Prisma Cloud also helps operationalize security outcomes by automatically mapping events to the Mitre ATT&CK Matrix. In the next steps you will learn how Prisma Cloud helps enable Exampli Corps find indicators of compromise and help secure their footprint.
+
+#### Mitre ATT&CK Matrix
+
+Exampli Corp has adopted Prisma Cloud and maintained consistent visibility on their applications. But seeing your resources does not make them immune to incidents during runtime. By using the Mirtre ATT&CK Matrix the Exampli Corp Security team gets analysis of potential threats to their applications mapped against the Mitre standard.
+
+1. Let's begin by navigating to **Monitor -> Runtime -> Incident Explorer**. On this screen we can view suspicious events collected get a feel for the types of incidents being reported.
+
+![Alt text for image](/screenshots/investigate-incidents-at-runtime-1.png "Optional title")
 
 #### Prevent Future Risk 
 
