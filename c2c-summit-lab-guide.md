@@ -174,7 +174,7 @@ How does this visibility help you protect your applications?
 
 8. Find the file that added the most severe vulnerabilities and open it up by clicking on it to learn more about specifically what CVEs were added. Your screen should look similar to the screen capture below :
 
-PLACEHOLDER FOR SCREENSHOT
+PLACEHOLDER FOR SCREENSHOT - Openssl
 
 9. Now that we have established some understanding of this container and have found some CVE's lets expand our knowledge by observing this workload's behavior using Prisma Cloud's foresnic modeling capabilities. Click the back arrow at the top right hand side of the UI and arrive back at the container summary view. Your screen should look similar to the screen capture below :
 
@@ -182,7 +182,9 @@ PLACEHOLDER FOR SCREENSHOT
 
 #### Modeleing Application Behavior
 
-1. Begin by clicking on the forensic microscope underneath the **Runtime** tab,
+1. Begin by clicking on the forensic microscope underneath the **Runtime** tab.
+
+PLACEHOLDER FOR SCREENSHOT - Foresnic Model
 
 2. Here you can see all the events displayed. Let’s take a deeper look at these events to get some details and see what has been happening with our bank-of-anthos-frontend.
 
@@ -196,9 +198,9 @@ PLACEHOLDER FOR SCREENSHOT
 
 ![Alt text for image](/screenshots/preventing-attacks-3.png "Optional title")
 
-2. Next, click on **Runtime** tab above. Here we can view highlights from the container's behavior and see if there are any security concerns with what the container is doing.
+2. Next, click on **Runtime** tab on the summary view. Here we can view highlights from the container's behavior and see if there are any security concerns with what the container is doing.
 
-PLACEHOLDER FOR SCREENSHOT
+PLACEHOLDER FOR SCREENSHOT - Runtime Events
 
 #### Investigate for Incidents
 
@@ -210,48 +212,15 @@ Lets begin by looking at the AI powered modeling Prisma Cloud provides. Process 
 
 ![Alt text for image](/screenshots/investigate-incidents-at-runtime-1.png "Optional title")
 
-#### Preventing attacks
+2. On this screen you will find a summarized list of findings from the defender including behavior that is not in the container's model. Your screen should look similar to the screen capture below :
 
-One of the most important parts of securing the banking app during runtime is preventing attacks. Like actual banks that have preventative capabilities such as safes and security guards, Exampli Corp uses Prisma Cloud defenders to prevent attacks from happening in real-time when all  prior controls fail.
+PLACEHOLDER FOR SCREENSHOT - runtime-summary
 
-1. Navigate back to **Radar -> Containers**
+3. Find the audit report of a foriegn binary execution of tcpdump. If you have trouble finding it you can type tcpdump in the search bar at the top of the UI.
 
-2. Ensure you are on the default namespace for the bank-of-anthos cluster.  Your screen should look similar to the screenshot below:
+PLACEHOLDER FOR SCREENSHOT - runtime-summary-1
 
-![Alt text for image](/screenshots/preventing-attacks-2.png "Optional title")
-
-7. In addition to image scanning, runtime visibility and protection; the Prisma Cloud defender also provides Web Application Firewall and API Security
-
-8. To take a look let’s navigate back to **Radars -> Containers** and ensure you are viewing the **bank-of-anthos** app.
-
-![Alt text for image](/screenshots/preventing-attacks-8.png "Optional title")
-
-9. The green firewall log indicates that the front-end microservice is protected by Prisma Cloud.
-
-10. Administrators can define rules to provide web application and api security capabilities to protect web applications. Prisma Cloud supports VM Hosts, Containers, Application Embedded, and function deployment architectures.
-
-![Alt text for image](/screenshots/preventing-attacks-10.png "Optional title")
-
-11. Administrators can define Custom Rules that provide Virtual Patching capabilities to protect against attacks exploiting CVE’s that have not yet been patched. For example check out the log4j blog where you can find more information about custom rules that were created to protect our customers. [Link](https://www.paloaltonetworks.com/blog/prisma-cloud/log-4-shell-vulnerability/)
-
-12. Take a look at some of the attacks the defender has prevented by navigating to **Monitor -> Events -> WAAS for Containers**.
-
-![Alt text for image](/screenshots/preventing-attacks-12.png "Optional title")
-
-Thankfully no major events have occurred yet on the accidentally deployed banking app, however we know Exampli Corp has a bad track record for not securing their apps. Let’s look at some historical data from last holiday season.
-
-Click in the filter bar and select **Date**. Enter Dec 1, 2021 for the **From** date and Jan 31, 2022 for the **To** date.
-
-13. Let’s dive into one of the **OS Command Injection** attacks. Click the **total** value to view the events.
-
-![Alt text for image](/screenshots/preventing-attacks-13.png "Optional title")
-
-14. Select one of the entries and answer the questions below:
-
-What was the result of the attack?
-Was it blocked?
-What was the http method that was used in the attack?
-What container image was attacked?
+PLACEHOLDER FOR SCREENSHOT - runtime-summary-filter
 
 #### Prevent Future Risk 
 
