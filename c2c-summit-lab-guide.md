@@ -446,7 +446,7 @@ Here we can quickly identify valuable information like the package version, lice
 
 8. How many Vulnerabilities are associated with the **cryptography: 38.0.1** package? Read the **Details** section to discover more about the CVE and confirm the **Fix Version**. Are there other packages with a higher CVSS score?
 
-Now that you have helped to protect the Bank of Anthos banking app Software Supply Chain, let’s take a look at the recent activity of the Exampli Corp developers.
+That concludes the exercise.
 
 ## Summary \ Resources
 
