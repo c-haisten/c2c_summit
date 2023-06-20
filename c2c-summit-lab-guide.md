@@ -16,19 +16,19 @@ Fortunately, Exampli Corp recently integrated Prisma Cloud into their developmen
 
 Will the Exampli Corp team take the time to build a secure app? Or will the stress of completing the Bank of Anthos app in time for deadlines lead to mistakes?
 
-Lab Overview
+### Lab Overview
 
 The lab is broken down into three sections :
 
-Gain Visibility and Control of Cloud Assets
+## Gain Visibility and Control of Cloud Assets
 
 In this first section you will learn how to use Prisma Cloud to quickly identify Risky Assets in Exampli’s cloud footprint, automatically inform the relevant stakeholders, and remediate misconfigurations that lead to cloud breaches. 
 
-Protect Critical Applications
+## Protect Critical Applications
 
 The second section covers detecting and protecting containerized workloads powering Exampli Corp’s critical Bank of Anthos application using Prisma Cloud Defenders. 
 
-Prevent Risk 
+## Prevent Risk 
 
 The final section includes shifting security left to help prevent vulnerable cloud infrastructure and applications from hitting runtime.
 
