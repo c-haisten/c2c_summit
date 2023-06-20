@@ -131,8 +131,6 @@ Well done, you helped identify alerts and vulnerabilities present in Exampli's G
 
 ![Alt text for image](/screenshots/jira-1.png "Optional title")
 
-PLACE HOLDER FOR SCREEN CAPTURE
-
 Prisma Cloud has many out of the box integrations as well as supports the use of Web Hooks to operationalize security outcomes using other third-party tools. To learn more view our public documenation for more info :
 
 https://docs.paloaltonetworks.com/prisma/prisma-cloud/prisma-cloud-admin/configure-external-integrations-on-prisma-cloud
