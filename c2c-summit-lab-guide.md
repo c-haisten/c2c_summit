@@ -188,23 +188,17 @@ PLACEHOLDER FOR SCREENSHOT
 
 ![Alt text for image](/screenshots/investigate-incidents-at-runtime-5.png "Optional title")
 
-3. Prisma Cloud observes the behavior of the workload monitoring the processes, network behavior, as well as binary executions for example. This allows administrators to both understand the behavior of their workloads as well as prevent malicious actions from taking place. To learn more please find the following documentation covering more details around runtime protection. (https://docs.paloaltonetworks.com/prisma/prisma-cloud/prisma-cloud-admin-compute/runtime_defense/runtime_defense_containers)
+3. Prisma Cloud observes the behavior of the workload monitoring the processes, network behavior, as well as binary executions for example. This allows administrators to both understand the behavior of their workloads as well as prevent malicious actions from taking place.
 
-4. Spend some time looking through the foresnic events and answer the following questions:
+4. To learn more please find the following documentation covering more details around runtime protection.(https://docs.paloaltonetworks.com/prisma/prisma-cloud/prisma-cloud-admin-compute/runtime_defense/runtime_defense_containers)
 
-What information can be gathered from the events?
-What types of events are being displayed?
-Should we be concerned about any of these events? What action if any should be taken?
-
-5. Now let's take a look at a summary of some of the suscipious behaviors taking place on this workload. Please click the close button at the bottom left of the UI. You should be back at the summary page and your screen should look similar to the screen capture below :
+5. Now let's take a look at a summary view of some of the suscipious behaviors taking place on this workload. Please click the close button at the bottom left of the UI. You should be back at the summary page and your screen should look similar to the screen capture below :
 
 ![Alt text for image](/screenshots/preventing-attacks-3.png "Optional title")
 
 2. Next, click on **Runtime** tab above. Here we can view highlights from the container's behavior and see if there are any security concerns with what the container is doing.
 
 PLACEHOLDER FOR SCREENSHOT
-
-
 
 ##### Investigate for Incidents
 
