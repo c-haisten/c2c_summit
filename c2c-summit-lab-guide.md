@@ -68,11 +68,11 @@ modules within Prisma Cloud.
 
 ![Alt text for image](/screenshots/discover-risky-assets-4.png "Optional title")
 
-5. Once in the Asset Inventory view, click on the **High Risk Assets** tab. Scroll towards the bottom and take a look at the **Google Compute Engine** service. GKE is Googles Kubernetes service and Exampli Corps uses GKE to host their container workloads that run the banking applications Exampli's customers use everyday. 
+5. Once in the Asset Inventory view, click on the **High Risk Assets** tab. Scroll towards the bottom and take a look at the **Google Compute Engine** service. GKE is Googles Kubernetes service and Exampli Corps uses GKE to host their container workloads that run the banking applications Exampli's customers use everyday.
+
+Note the two columns **Assets with Alerts** and **Assets with Vulnerabilities**. 
 
 ![Alt text for image](/screenshots/discover-risky-assets-5.png "Optional title")
-
-  Note the two columns **Assets with Alerts** and **Assets with Vulnerabilities**. 
 
 6. Click on one of the hyperlinked numbers in the Assets with Alerts column.
 
