@@ -32,8 +32,6 @@ Prevent Risk
 
 The final section includes shifting security left to help prevent vulnerable cloud infrastructure and applications from hitting runtime.
 
-
-
 ### Architecture 
 The lab primarily focuses on Exampli Corp’s Banking Application known as the Bank of Anthos. The Bank of Anthos application is an example application purpose built for Google Kubernetes Engine, you can find the repo here as well as in the Resources section.
 
@@ -176,7 +174,37 @@ How does this visibility help you protect your applications?
 
 8. Find the file that added the most severe vulnerabilities and open it up by clicking on it to learn more about specifically what CVEs were added. Your screen should look similar to the screen capture below :
 
-PLACEHOLDER FOR SCREEN CAPTURE
+PLACEHOLDER FOR SCREENSHOT
+
+9. Now that we have established some understanding of this container and have found some CVE's lets expand our knowledge by observing its behavior using Prisma Cloud's AI enabled foresnic modeling capabilities. Click the back arrow at the top right hand side of the UI and arrive back at the container summary view. Your screen should look similar to the screen capture below :
+
+![Alt text for image](/screenshots/preventing-attacks-3.png "Optional title")
+
+#### Modeleing Application Behavior
+
+1. Begin by clicking on the forensic microscope underneath the **Runtime** tab,
+
+2. Here you can see all the events displayed. Let’s take a deeper look at these events to get some details and see what has been happening with our bank-of-anthos-frontend.
+
+![Alt text for image](/screenshots/investigate-incidents-at-runtime-5.png "Optional title")
+
+3. Prisma Cloud observes the behavior of the workload monitoring the processes, network behavior, as well as binary executions for example. This allows administrators to both understand the behavior of their workloads as well as prevent malicious actions from taking place. To learn more please find the following documentation covering more details around runtime protection. (https://docs.paloaltonetworks.com/prisma/prisma-cloud/prisma-cloud-admin-compute/runtime_defense/runtime_defense_containers)
+
+4. Spend some time looking through the foresnic events and answer the following questions:
+
+What information can be gathered from the events?
+What types of events are being displayed?
+Should we be concerned about any of these events? What action if any should be taken?
+
+5. Now let's take a look at a summary of some of the suscipious behaviors taking place on this workload. Please click the close button at the bottom left of the UI. You should be back at the summary page and your screen should look similar to the screen capture below :
+
+![Alt text for image](/screenshots/preventing-attacks-3.png "Optional title")
+
+2. Next, click on **Runtime** tab above. Here we can view highlights from the container's behavior and see if there are any security concerns with what the container is doing.
+
+PLACEHOLDER FOR SCREENSHOT
+
+
 
 ##### Investigate for Incidents
 
@@ -187,28 +215,6 @@ Lets begin by looking at the AI powered modeling Prisma Cloud provides. Process 
 1. Let's begin by navigating to **Monitor -> Runtime -> Incident Explorer**. On this screen we can view suspicious events collected get a feel for the types of incidents being reported.
 
 ![Alt text for image](/screenshots/investigate-incidents-at-runtime-1.png "Optional title")
-
-2. Next, click on **Container Models** tab. Here we can view all of our containers and take a deeper look at the forensics to see if there are any security concerns that slipped through the cracks.
-
-![Alt text for image](/screenshots/investigate-incidents-at-runtime-2.png "Optional title")
-
-3. We know that Exampli Corp is getting ready to release the new Bank of Anthos App, so let's search **“gcr.io/bank-of-anthos-ci/frontend:v0.5.5”** in the filter box to see how the containers are looking.
-
-![Alt text for image](/screenshots/investigate-incidents-at-runtime-3.png "Optional title")
-
-4. Great! Now let's click on the microscope icon to take a look at the digital forensics
-
-![Alt text for image](/screenshots/investigate-incidents-at-runtime-4.png "Optional title")
-
-5. Here you can see all the events displayed. Let’s take a deeper look at these events to get some details and see what has been happening with our bank-of-anthos-frontend.
-
-![Alt text for image](/screenshots/investigate-incidents-at-runtime-5.png "Optional title")
-
-6. Spend some time looking through the events and answer the following questions:
-
-What information can be gathered from the events?
-What types of events are being displayed?
-Should we be concerned about any of these events? What action if any should be taken?
 
 #### Preventing attacks
 
