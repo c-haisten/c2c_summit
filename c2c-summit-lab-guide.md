@@ -72,7 +72,7 @@ modules within Prisma Cloud.
 
 ![Alt text for image](/screenshots/discover-risky-assets-5.png "Optional title")
 
-Note the two columns **Assets with Alerts** and **Assets with Vulnerabilities**. 
+  Note the two columns **Assets with Alerts** and **Assets with Vulnerabilities**. 
 
 6. Click on one of the hyperlinked numbers in the Assets with Alerts column.
 
