@@ -351,126 +351,56 @@ Looking at the same **big_data.tf** template, there is another HIGH severity mis
 Prisma Cloud also gives administrators the ability to detect exposed secrets. This is a powerful
 tool that can be utilized from the Project page.
 
-1. Clear out all of your filters and select **“Secrets”** under **category**. Now you can view any exposed secrets in your repository. Let's take a look at **/terraform/aws**
+1. Clear out all of your filters and select **“Secrets”** under **Category**. Now you can view any exposed secrets in your repository. 
 
-![Alt text for image](/screenshots/identify-exposed-secrets-1.png "Optional title")
+![image](https://github.com/c-haisten/c2c_summit/assets/98335592/40acdfec-0876-4ed9-af46-2e94e6c7ad1c)
 
-2. Once you click on **/terraform/aws** you will see that there are several misconfigurations that expose secrets. Take a closer look at the **providers.tf** template. Note that you may have to search for the file if the filters don’t work due to concurrent users within the lab. Here we can see a variety of issues with this terraform template. The first being hard coded plain text secrets.
+2. Find the secrets in the on **/terraform/aws** you will see that there are several misconfigurations that expose secrets. Take a closer look at the **providers.tf** template. Note that you may have to search for the file if the filters don’t work due to concurrent users within the lab. Here we can see a variety of issues with this terraform template. The first being hard coded plain text secrets.
 
-![Alt text for image](/screenshots/identify-exposed-secrets-2.png "Optional title")
+![image](https://github.com/c-haisten/c2c_summit/assets/98335592/146e03d9-170b-435f-8c1d-b3d3995f820d)
 
 3. When accessing AWS programmatically users can select to use an access key to verify their identity, and the identity of their applications. An access key consists of an access key ID and a secret access key. Anyone with an access key has the same level of access to AWS resources.
-
-**We recommend you protect access keys and keep them private. Specifically, do not store hard coded keys and secrets in infrastructure such as code, or other version-controlled configuration settings.**
 
 ![Alt text for image](/screenshots/identify-exposed-secrets-3.png "Optional title")
 
 **According to the [2022 Verizon Data Breach Report](https://www.verizon.com/business/resources/T14f/reports/dbir/2022-data-breach-investigations-report-dbir.pdf), stolen access credentials are used in 80% of successful data breaches.**
 
-Fortunately, Prisma Cloud makes it easy for anyone to quickly determine how the exposed secret can harm your organization and what steps must be taken. These exposed AWS access credentials could let an unauthorized attacker access the Exampli Corp AWS account.
-
-#### Investigating the Supply Chain
-
-1. Use the navigation pane on the left hand and click the **blue arrow** on the lower left side of the UI to open up the navigation pane and move between the different modules within Prisma Cloud.
-
-![Alt text for image](/screenshots/investigating-the-supply-chain-1.png "Optional title")
-
-2. Next, use the navigation pane to select the **Code Security** module and select **Supply Chain**.
-
-![Alt text for image](/screenshots/investigating-the-supply-chain-2a.png "Optional title")
-
-![Alt text for image](/screenshots/investigating-the-supply-chain-2b.png "Optional title")
-
-3. Use the Supply Chain Graph to view the relationships between different IaC templates and the types of infrastructure and services they provision.
-
-Be sure to select the **umman-manda/Exampli** repository from the drop-down window in the filters at the top.
-
-![Alt text for image](/screenshots/investigating-the-supply-chain-3.png "Optional title")
-
-4. Next, take a deeper look at the **gke.tf** template. This gke.tf template defines the Kubernetes deployment that Exampli is looking to push to production.
-
-Feel free to test the filters on the left side of the UI and search bar at the top to quickly locate templates.
-
-![Alt text for image](/screenshots/investigating-the-supply-chain-4a.png "Optional title")
-
-![Alt text for image](/screenshots/investigating-the-supply-chain-4b.png "Optional title")
-
-![Alt text for image](/screenshots/investigating-the-supply-chain-4c.png "Optional title")
-
-5. Once you have found the **gke.tf** template click on the first resource **google_container_cluster.workload_cluster**. Notice on the right side of the UI there is additional information about this resource
-
-6. Your screen should look similar to the screenshot below.
-
-![Alt text for image](/screenshots/investigating-the-supply-chain-6.png "Optional title")
-
-7. Here we can quickly identify valuable information like related resources that this resource may depend on. The amount of infrastructure dependencies that modern software relies on is only increasing.
-
-Thankfully, Prisma Cloud allows the Exampli Co. security team to scan all their IaC and remediate findings with single click Pull Requests to mitigate any vulnerabilities found.
-
-8. You can easily view the original scan by tabbing over and seeing where errors were identified.
-
-![Alt text for image](/screenshots/investigating-the-supply-chain-8.png "Optional title")
-
-9. To easily fix these issues, authorized administrators can initiate a pull request with a single click from the Prisma Cloud UI. **This feature is not available for read-only users.**
-
-![Alt text for image](/screenshots/investigating-the-supply-chain-9.png "Optional title")
-
-10. We have submitted a pull request in advance that can be viewed at the following [link](https://github.com/c-haisten/ZT-Road-Show/pulls).
-
-![Alt text for image](/screenshots/investigating-the-supply-chain-10.png "Optional title")
-
-11. Dig into the PR and take a look at the requested changes to the **gke.tf** template.
-
-![Alt text for image](/screenshots/investigating-the-supply-chain-11.png "Optional title")
-
-12. Feel free to explore other templates and PR’s that have been submitted.
-
-### Exercise
-
-Let's begin by exploring the power of shifting security left with Infrastructure as code scanning. As infrastructure is being defined as code security must be integrated with the tools developers use. In this exercise, we will take a look at some IaC templates within Exampli Corp’s repository.
+Fortunately, Prisma Cloud makes it easy for anyone to quickly determine how the exposed secret can harm your organization and what steps must be taken. These exposed AWS access credentials could let an unauthorized attacker access the Exampli Corp AWS account. In this section we have looked at infrastructure in Exampli's repository but what about application code and OSS? 
 
 ### Software Composition Analysis:
 
-1. Login to [Prisma Cloud](https://app4.prismacloud.io/auth/signin).
-
-2. Use the credentials provided by your Instructor to authenticate.
-
-3. Use the navigation pane on the left hand and click the **blue arrow** on the lower left side of the UI to open up the navigation pane and move between the different modules within Prisma Cloud.
-
-![Alt text for image](/screenshots/software-composition-analysis-3.png "Optional title")
-
-4. Next, use the navigation pane to select the **Code Security** module and then select **Projects**.
-
-![Alt text for image](/screenshots/software-composition-analysis-4.png "Optional title")
-
-5. Ensure that you select the **c-haisten/bank-of-anthos** repository.
+1. Ensure that you select the **Exampli** view.
 
 ![Alt text for image](/screenshots/software-composition-analysis-5.png "Optional title")
 
-6. Once you have selected the correct repository, it will show you all the security incidents found in the code of that branch. Let’s check to see if there are any serious vulnerabilities by filtering **Category -> Vulnerabilities** and **Severity -> High.**
+2. Use the filters and select **Code Category Vulnerability**.
 
-![Alt text for image](/screenshots/software-composition-analysis-6.png "Optional title")
+![image](https://github.com/c-haisten/c2c_summit/assets/98335592/bd200c35-25b1-49a1-8fbd-34b011b04812)
 
-7. Next, we will select a CVE ID to investigate the vulnerability and determine what next steps to take. Prisma Cloud gives us several options for how to interact with the vulnerability.
+3. Let’s check to see if there are any serious vulnerabilities by filtering  **Category -> Vulnerabilities** and **Severity -> Critical.**
 
-Administrators can click suppress, or fix. The suppress button allows you to dismiss all incidents that fall under that specific policy violation. The fix button will allow you to remediate the vulnerability via a bump fix. Here we can see that the vulnerability can be fixed easily by bumping from v2.7.4 to 2.7.5.
+5. Next, find the CVE ID CVE-2022-23305 and click on it. This is the CVE associated with the infamous log4shell attacks. This view provides critical information that Exampli's teams can use to investigate the vulnerability and determine what next steps to take. 
+
+![image](https://github.com/c-haisten/c2c_summit/assets/98335592/ec507f49-ce05-4399-85d0-f6b6affbfc5b)
+
+Administrators can click suppress, or fix. The suppress button allows you to dismiss all incidents that fall under that specific policy violation. The fix button will allow you to remediate the vulnerability via a bump fix. Here we can see that the vulnerability can be fixed by bumping to 2.0.
 
 **Suppress and Fix requires increased RBAC that is not available in this lab**
 
 8. You can also click the “Details” or “Errors” tab on the right side of the page to get some more information on the dangers of the specific vulnerability.
 
-![Alt text for image](/screenshots/software-composition-analysis-8a.png "Optional title")
+![image](https://github.com/c-haisten/c2c_summit/assets/98335592/c35609ce-cc60-43ee-95df-c7842bc7340a)
 
-![Alt text for image](/screenshots/software-composition-analysis-8b.png "Optional title")
+![image](https://github.com/c-haisten/c2c_summit/assets/98335592/4b4f6d10-2873-42c8-86f8-572c99c98e92)
 
-9. This CVE has a CVSS score of 7.5! It makes Exampli Corp’s Bank of Anthos app vulnerable to a request smuggling attack.
+9. This CVE has a CVSS score of 9.8! Its possible Exampli's applications could be vulnerable to a remote code execution attack.
 
-On this page Exampli Corp developers can gain context on the CVE and click on the link to NIST providing them with all the details and documentation regarding the vulnerability.
+On this page Exampli Corp developers can gain context on the CVE and click on the link to NIST providing them with all the details and documentation regarding the vulnerability. Feel free to explore other interesting findings in Exampli's repositories. Can you find anythig more dangerous CVE-2022-23305? 
 
 10. In Prisma Cloud licenses are scanned in parallel to vulnerability scanning. This means that Exampli Corp developers can make sure they are remaining compliant when working with open source packages. Adjust your filter to **Category -> Licenses** and
-let's see if there are any licensing issues in the Bank of Anthos Repo.
+let's see if there are any licensing issues in the Bank of Anthos Repo. Remember to clear the severity filter!
 
-![Alt text for image](/screenshots/software-composition-analysis-10.png "Optional title")
+![image](https://github.com/c-haisten/c2c_summit/assets/98335592/720b13b9-5b30-43f9-8e69-c92b9bcbd5f3)
 
 11. Now, let's scroll down and look at some of the licensing issues identified by Prisma Cloud.
 
