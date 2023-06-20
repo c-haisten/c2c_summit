@@ -202,27 +202,27 @@ PLACEHOLDER FOR SCREENSHOT - Foresnic Model
 
 6. Next, click on **Runtime** tab on the summary view. Here we can view highlights from the container's behavior and see if there are any security concerns with what the container is doing.
 
-PLACEHOLDER FOR SCREENSHOT - Runtime Events
+![runtime-events](https://github.com/c-haisten/c2c_summit/assets/98335592/92d8f7c6-a14f-4a7a-8420-07afcedd0125)
 
 7. On this screen you will find a summarized list of findings from the defender including behavior that is not in the container's model. Your screen should look similar to the screen capture below :
 
-PLACEHOLDER FOR SCREENSHOT - runtime-summary
+![runtime-summary](https://github.com/c-haisten/c2c_summit/assets/98335592/d751a357-11a1-437a-a0c3-95e30404752d)
 
 8. Find the audit finding of a foriegn binary execution of tcpdump and click on it. If you have trouble finding it you can type tcpdump in the search bar at the top of the UI.
 
-PLACEHOLDER FOR SCREENSHOT - runtime-summary-1
+![runtime-summary-1](https://github.com/c-haisten/c2c_summit/assets/98335592/24adb5ff-5f69-43af-b388-8ab63ae9929b)
 
-PLACEHOLDER FOR SCREENSHOT - runtime-summary-filter
+![runtime-summary-filter](https://github.com/c-haisten/c2c_summit/assets/98335592/d955e32c-eee3-45c2-8e80-3c9dd9d65d77)
 
 9. This view provides an expanded understanding of the finding. We can see that Prisma Cloud alerted on this finding due to the default rule to alert on suspicious behavior. Administrators can configure their own rules alert on or block malicious activity.
 
 10. Creating rules to defend applications is easy in Prisma Cloud. Use the navigation bar on the left hand side of the UI and select Compute -> Defend -> Runtime.
 
-PLACEHOLDER FOR SCREENSHOT - runtime-rules
+![runtime-rules](https://github.com/c-haisten/c2c_summit/assets/98335592/1332f7ea-c45f-4004-8eba-2d30a98b9cfc)
 
 11. On this page administrators can configure rules that make sense for their applications. There is a great deal of granularity given to Prisma Cloud administrators to configure allowed process, networking, and file system actitivies. Prisma Cloud defenders are also integrated with Palo Alto Network's WildFire anti-malware service allowing for the blocking of malware found on the application.
 
-PLACEHOLDER FOR SCREENSHOT - runtime-rules-blocking
+![runtime-rules-blocking](https://github.com/c-haisten/c2c_summit/assets/98335592/3b0f5dcb-7e1f-4668-bf90-40d41964bf41)
 
 **Feel free to explore the different pages, because this is a lab you will have limited permissions and are not able to edit or create rules.**
 
@@ -236,11 +236,11 @@ Exampli Corp has adopted Prisma Cloud and maintained consistent visibility on th
 
 1. Let's begin by navigating to **Monitor -> Monitor -> ATT&CK**. On this screen we can see an interactive view of the attack framework organizing the different observed findings with associated attack methods.
 
-PLACEHOLDER FOR SCREENSHOT - mitre-selection
+![mitre-selection](https://github.com/c-haisten/c2c_summit/assets/98335592/0595d572-4268-4b6c-beb2-fe87cf2a8d99)
 
 2. Start by clearing out the time filter to get a better view of different types of findings. By default the view is set to 7 days. You can clear it by clicking on the 'X' found on the filter. 
 
-PLACEHOLDER FOR SCREENSHOT - mitre-time
+![mitre-time](https://github.com/c-haisten/c2c_summit/assets/98335592/6ece5937-1a37-4248-816f-368af1f3884c)
 
 3. Take a look at the **Account Manipulation** category underneath the **Persistence** column and click on it. You screen should look similar to the capture below :
 
