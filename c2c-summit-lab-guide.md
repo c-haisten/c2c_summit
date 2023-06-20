@@ -176,7 +176,7 @@ How does this visibility help you protect your applications?
 
 8. Find the file that added the most severe vulnerabilities and open it up by clicking on it to learn more about specifically what CVEs were added. Your screen should look similar to the screen capture below :
 
-PLACEHOLDER FOR SCREENSHOT - Openssl
+![openssl-1](https://github.com/c-haisten/c2c_summit/assets/98335592/7d522d07-18c8-4ce0-afe2-4d12cb44d370)
 
 9. Now that we have established some understanding of this container and have found some CVE's lets expand our knowledge by observing this workload's behavior using Prisma Cloud's foresnic modeling capabilities. Click the back arrow at the top right hand side of the UI and arrive back at the container summary view. Your screen should look similar to the screen capture below :
 
@@ -186,7 +186,7 @@ PLACEHOLDER FOR SCREENSHOT - Openssl
 
 1. Begin by clicking on the forensic microscope underneath the **Runtime** tab.
 
-PLACEHOLDER FOR SCREENSHOT - Foresnic Model
+![forensic-model](https://github.com/c-haisten/c2c_summit/assets/98335592/39476dcb-54cc-418e-bca4-cfeeb42cac71)
 
 2. Here you can see all the events displayed. Let’s take a deeper look at these events to get some details and see what has been happening with our bank-of-anthos-frontend.
 
