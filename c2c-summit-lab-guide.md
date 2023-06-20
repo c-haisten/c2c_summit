@@ -234,9 +234,26 @@ In addition to providing visibility, context, and protection for applications Pr
 
 Exampli Corp has adopted Prisma Cloud and maintained consistent visibility on their applications. But seeing your resources does not make them immune to incidents during runtime. By using the Mirtre ATT&CK Matrix the Exampli Corp Security team gets analysis of potential threats to their applications mapped against the Mitre standard.
 
-1. Let's begin by navigating to **Monitor -> Runtime -> Incident Explorer**. On this screen we can view suspicious events collected get a feel for the types of incidents being reported.
+1. Let's begin by navigating to **Monitor -> Monitor -> ATT&CK**. On this screen we can see an interactive view of the attack framework organizing the different observed findings with associated attack methods.
 
-![Alt text for image](/screenshots/investigate-incidents-at-runtime-1.png "Optional title")
+PLACEHOLDER FOR SCREENSHOT - mitre-selection
+
+2. Start by clearing out the time filter to get a better view of different types of findings. By default the view is set to 7 days. You can clear it by clicking on the 'X' found on the filter. 
+
+PLACEHOLDER FOR SCREENSHOT - mitre-time
+
+3. Take a look at the **Account Manipulation** category underneath the **Persistence** column and click on it. You screen should look similar to the capture below :
+
+PLACEHOLDER FOR SCREENSHOT - mitre-account
+
+4. Prisma Cloud provides a summary of findings associated with Account Manipulation and organizes for administrators to use for investigations and remediation efforts. For this particular attack method we can view the description of Account Manipulation according to Mitre.  
+
+**Adversaries may manipulate accounts to maintain access to victim systems. Account manipulation can consist of any action that preserves adversary access to a compromised environment, such as modifying or adding credentials to an account or changing permissions. In Kubernetes environments, adversaries can persist access by creating RoleBindings and ClusterRoleBindings that grant access to an adversary-controlled service account, user, or group.**
+
+5. Click on a recent finding to learn more, your screen should look similar to the capture below :
+
+![image](https://github.com/c-haisten/c2c_summit/assets/98335592/43faa08c-17ae-48e9-aef8-c6c7eacd13ab)
+
 
 #### Prevent Future Risk 
 
