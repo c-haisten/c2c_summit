@@ -16,7 +16,7 @@ Fortunately, Exampli Corp recently integrated Prisma Cloud into their developmen
 
 Will the Exampli Corp team take the time to build a secure app? Or will the stress of completing the Bank of Anthos app in time for deadlines lead to mistakes?
 
-### Lab Overview
+## Lab Overview
 
 The lab is broken down into three sections :
 
