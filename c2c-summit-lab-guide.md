@@ -254,7 +254,7 @@ Exampli Corp has adopted Prisma Cloud and maintained consistent visibility on th
 
 ![image](https://github.com/c-haisten/c2c_summit/assets/98335592/43faa08c-17ae-48e9-aef8-c6c7eacd13ab)
 
-6. Scroll to the bottom of the page to learn more information about the container and audit details.
+6. Scroll to the bottom of the page to learn more information about the container and audit details. Here we can see that this alert is related to the GKE hosts and Bank of Anthos application from the information provided in the container summary. It appears an attacker is trying to create a backdoor into the application. Fortunately because Prisma Cloud is integrated with JIRA and issues have been created, work is underway to quaratine the cluster. 
 
 ![image](https://github.com/c-haisten/c2c_summit/assets/98335592/c99fd419-5d7b-4abd-8d0e-9373d8c3e1ec)
 
@@ -270,11 +270,6 @@ Let's begin this next exercise by exploring the power of shifting security left 
 scanning. As infrastructure is being defined as code, security must be integrated with the
 tools developers use.
 
-Fortunately, Prisma Cloud can be integrated into the development pipeline and tools
-developers use to secure both the infrastructure code and the application code organizations depend on. 
-
-To learn more visit: (https://www.paloaltonetworks.com/prisma/cloud/cloud-code-security)
-
 The first place we will begin is with investigating Exampli Corp's infrastructure code in the company's GitHub repositories. 
 
 Follow the steps below :
@@ -285,14 +280,21 @@ Follow the steps below :
 
 ![Alt text for image](/screenshots/find-and-fix-insecure-infrastructure-code-4.png "Optional title")
 
-2. At the top of the UI selec the **Exampli** view.
+2. At the top of the UI select the **Exampli** view.
 
-![Alt text for image](/screenshots/find-and-fix-insecure-infrastructure-code-5.png "Optional title")
+![image](https://github.com/c-haisten/c2c_summit/assets/98335592/fe7d38fc-8dc2-4c7e-ab4d-8a9e96949317)
 
-6. Once you have selected the correct repository, filter by “High” severity and let's take a
-look at some troubling misconfigurations found in **/terraform/gcp**
+3. Once you have selected the correct view, begin by using the filters and ensure you select the **Code Category IaC Misconfiguration**
 
-![Alt text for image](/screenshots/find-and-fix-insecure-infrastructure-code-6.png "Optional title")
+![image](https://github.com/c-haisten/c2c_summit/assets/98335592/ed8d5f7e-7689-4891-b732-8a4954baee9a)
+
+![image](https://github.com/c-haisten/c2c_summit/assets/98335592/2247402e-3d58-4fa6-992b-4308de8098e6)
+
+4. Here we can see a summary of various findings in Exampli's code repositories. Feel free to use the filters to investigate different findings and see if you can find any high severity issues.
+
+5. When you are finished use the search bar at the top of the UI and search for the big_data.tf script that Exampli's infrastructure team has been developing for a new analytics project at Exampli Corps.
+
+![image](https://github.com/c-haisten/c2c_summit/assets/98335592/de61f6d5-6817-41b8-817c-8e03d3fb21c3)
 
 7. Now that we have filtered by severity, explore the different misconfigurations and
 identify the one that says **_GCP SQL database is publicly accessible._**
