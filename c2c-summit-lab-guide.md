@@ -176,7 +176,7 @@ How does this visibility help you protect your applications?
 
 PLACEHOLDER FOR SCREENSHOT
 
-9. Now that we have established some understanding of this container and have found some CVE's lets expand our knowledge by observing its behavior using Prisma Cloud's AI enabled foresnic modeling capabilities. Click the back arrow at the top right hand side of the UI and arrive back at the container summary view. Your screen should look similar to the screen capture below :
+9. Now that we have established some understanding of this container and have found some CVE's lets expand our knowledge by observing this workload's behavior using Prisma Cloud's foresnic modeling capabilities. Click the back arrow at the top right hand side of the UI and arrive back at the container summary view. Your screen should look similar to the screen capture below :
 
 ![Alt text for image](/screenshots/preventing-attacks-3.png "Optional title")
 
@@ -200,7 +200,7 @@ PLACEHOLDER FOR SCREENSHOT
 
 PLACEHOLDER FOR SCREENSHOT
 
-##### Investigate for Incidents
+#### Investigate for Incidents
 
 Exampli Corp has adopted Prisma Cloud and maintained consistent visibility on their applications. But seeing your resources does not make them immune to incidents during runtime. By using incident explorer the Exampli Corp Security team gets real-time detection and analysis of all potential threats that violate their security policies.
 
