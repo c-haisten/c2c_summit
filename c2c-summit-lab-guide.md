@@ -271,31 +271,21 @@ scanning. As infrastructure is being defined as code, security must be integrate
 tools developers use.
 
 Fortunately, Prisma Cloud can be integrated into the development pipeline and tools
-developers use to secure IaC. With Bridgecrew from Prisma Cloud you can begin leveraging
-the open source tool Checkov for free.
+developers use to secure both the infrastructure code and the application code organizations depend on. 
 
-To learn more visit: https://bridgecrew.io/checkov/
+To learn more visit: (https://www.paloaltonetworks.com/prisma/cloud/cloud-code-security)
 
-The first place we will begin is with investigating Exampli Corp's infrastructure code in the company's GitHub repository. 
+The first place we will begin is with investigating Exampli Corp's infrastructure code in the company's GitHub repositories. 
 
 Follow the steps below :
 
-1. Login to [Prisma Cloud](https://app4.prismacloud.io/auth/signin).
-
-2. Use the credentials provided by your Instructor to authenticate.
-
-3. Use the navigation pane on the left hand and click the **blue arrow** on the lower left
-side of the UI to open up the navigation pane and move between the different
-modules within Prisma Cloud.
+1. Use the navigation pane to select the **Code Security** module and then select **Projects.**
 
 ![Alt text for image](/screenshots/find-and-fix-insecure-infrastructure-code-3.png "Optional title")
 
-4. Next, use the navigation pane to select the **Code Security** module and then select
-**Projects.**
-
 ![Alt text for image](/screenshots/find-and-fix-insecure-infrastructure-code-4.png "Optional title")
 
-5. Use the search function to select the **umman-manda/Exampli** repository
+2. At the top of the UI selec the **Exampli** view.
 
 ![Alt text for image](/screenshots/find-and-fix-insecure-infrastructure-code-5.png "Optional title")
 
