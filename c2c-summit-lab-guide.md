@@ -16,6 +16,37 @@ Fortunately, Exampli Corp recently integrated Prisma Cloud into their developmen
 
 Will the Exampli Corp team take the time to build a secure app? Or will the stress of completing the Bank of Anthos app in time for deadlines lead to mistakes?
 
+Lab Overview
+
+The lab is broken down into three sections :
+
+Gain Visibility and Control of Cloud Assets
+
+In this first section you will learn how to use Prisma Cloud to quickly identify Risky Assets in Exampli’s cloud footprint, automatically inform the relevant stakeholders, and remediate misconfigurations that lead to cloud breaches. 
+
+Protect Critical Applications
+
+The second section covers detecting and protecting containerized workloads powering Exampli Corp’s critical Bank of Anthos application using Prisma Cloud Defenders. 
+
+Prevent Risk 
+
+The final section includes shifting security left to help prevent vulnerable cloud infrastructure and applications from hitting runtime.
+
+
+
+### Architecture 
+The lab primarily focuses on Exampli Corp’s Banking Application known as the Bank of Anthos. The Bank of Anthos application is an example application purpose built for Google Kubernetes Engine, you can find the repo here as well as in the Resources section.
+
+If you are unfamiliar with Kubernetes or container orchestration do not worry below you can find a HLD of the applications architecture. Additionally, in the Resources section there are provided links to learn more about Kubernetes and container orchestration. 
+
+Prisma Cloud is integrated with mock company Exampli Corp in the following ways : 
+
+1. Cloud Accounts are onboarded with Prisma Cloud allowing visibility into Exampli’s resources as well as their associated behavior and configuration states.
+
+2. Critical applications in Exampli Corp’s cloud footprint are protected by Prisma Cloud defenders.
+
+3. Code Repositories, Image Registries, and CI Tools are on-boarded into Prisma Cloud allowing for detection and remediation of misconfigurations and vulnerabilities earlier on in the development process.
+
 ### Resources
 
 Vulnerable IaC :
