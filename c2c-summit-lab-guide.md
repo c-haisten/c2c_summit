@@ -129,6 +129,8 @@ Please feel free to explore the other alerts and CVE's for more insight.
 
 Well done, you helped identify alerts and vulnerabilities present in Exampli's GKE cluster. Fortunately, Exampli Corps has integrated Prisma Cloud with the organization's Jira and Slack instances. With this integration configured the appropriate system and application owners have been notified and Jira Issues have been created to track their remediation automatically.
 
+![Alt text for image](/screenshots/jira-1.png "Optional title")
+
 PLACE HOLDER FOR SCREEN CAPTURE
 
 Prisma Cloud has many out of the box integrations as well as supports the use of Web Hooks to operationalize security outcomes using other third-party tools. To learn more view our public documenation for more info :
