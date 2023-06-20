@@ -131,7 +131,9 @@ Well done, you helped identify alerts and vulnerabilities present in Exampli's G
 
 ![Alt text for image](/screenshots/jira-1.png "Optional title")
 
-Prisma Cloud has many out of the box integrations as well as supports the use of Web Hooks to operationalize security outcomes using other third-party tools. To learn more view our public documenation for more info :
+Prisma Cloud has many out of the box integrations as well as supports the use of Web Hooks to operationalize security outcomes using other third-party tools.
+
+To learn more view our public documenation for more info :
 
 https://docs.paloaltonetworks.com/prisma/prisma-cloud/prisma-cloud-admin/configure-external-integrations-on-prisma-cloud
 
@@ -216,11 +218,26 @@ Lets begin by looking at the AI powered modeling Prisma Cloud provides. Process 
 
 PLACEHOLDER FOR SCREENSHOT - runtime-summary
 
-3. Find the audit report of a foriegn binary execution of tcpdump. If you have trouble finding it you can type tcpdump in the search bar at the top of the UI.
+3. Find the audit finding of a foriegn binary execution of tcpdump and click on it. If you have trouble finding it you can type tcpdump in the search bar at the top of the UI.
 
 PLACEHOLDER FOR SCREENSHOT - runtime-summary-1
 
 PLACEHOLDER FOR SCREENSHOT - runtime-summary-filter
+
+4. This view provides an expanded understanding of the finding. We can see that Prisma Cloud alerted on this finding due to the default rule to alert on suspicious behavior. Administrators can configure their own rules alert on or block malicious activity.
+
+5. Creating rules to defend applications is easy in Prisma Cloud. Use the navigation bar on the left hand side of the UI and select Compute -> Defend -> Runtime.
+
+PLACEHOLDER FOR SCREENSHOT - runtime-rules
+
+6. On this page administrators can configure rules that make sense for their applications. There is a great deal of granularity given to Prisma Cloud administrators to configure allowed process, networking, and file system actitivies. Prisma Cloud defenders are also integrated with Palo Alto Network's WildFire anti-malware service allowing for the blocking of malware found on the application.
+
+PLACEHOLDER FOR SCREENSHOT - runtime-rules-blocking
+
+**Feel free to explore the different pages, because this is a lab you will have limited permissions are not able to edit or create anyrules.**
+
+For more information about runtime rules and protection from Prisma Cloud check out our public documentation here. (https://docs.paloaltonetworks.com/prisma/prisma-cloud/prisma-cloud-admin-compute/runtime_defense/runtime_defense_containers)
+
 
 #### Prevent Future Risk 
 
