@@ -92,7 +92,6 @@ modules within Prisma Cloud.
 
 ![Alt text for image](/screenshots/find-and-fix-insecure-infrastructure-code-3.png "Optional title")
 
-
 4. Next, use the navigation pane to select the **Inventory** module and then select
 **Assets.**
 
@@ -148,7 +147,9 @@ Now that we have learned about some vulnerabilties and misconfigurations on Exam
 
 The first step to protecting applications is to gain and maintain comprehensive visibility of your applications and all their associated resources. If Exampli Corp does not have oversight of their cloud environment it is impossible for them to stop emerging threats, respond to incidents, or reduce vulnerabilities. In a modern multi-cloud and hybrid world, applications are broken into different environments across the clouds like VMs, containers, serverless compute architecture types. Maintaining visibility is essential to protecting applications at runtime.
 
-Let's help Exampli Corp get a clear picture of the application running on the vulnerable GKE cluster from the previous section.  Start by taking a look at the microservices running the Bank of Anthos application using Prisma Cloud’s Radar feature.
+Prisma Cloud supports a massive amount of compute types, to review the supported systems check out our public documentation. (https://docs.paloaltonetworks.com/prisma/prisma-cloud/prisma-cloud-admin-compute/install/system_requirements)
+
+Let's help Exampli Corp get a clear picture of the application running on the vulnerable GKE cluster from the previous section. Start by taking a look at the microservices running the Bank of Anthos application using Prisma Cloud’s Radar feature.
 
 1. The Radar feature lets you gain a bird’s eye view to monitor and understand your cloud applications. It helps you visualize the connectivity between microservices and search for vulnerabilities. Navigate to **Compute -> Radar -> Containers** and select the cluster **bank-of-anthos**.
 
