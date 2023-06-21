@@ -222,7 +222,7 @@ Prisma Cloud observes and logs behavior such as running processes, network behav
 
 8. This view provides an expanded understanding of the finding. We can see that Prisma Cloud alerted on this finding due to the default rule to alert on suspicious behavior. Administrators can configure their own rules alert on or block malicious activity.
 
-9. Creating rules to defend applications is easy in Prisma Cloud. Use the navigation bar on the left hand side of the UI and select Compute -> Defend -> Runtime.
+9. Creating rules to defend applications is easy in Prisma Cloud. Use the navigation bar on the left hand side of the UI and select **Compute -> Defend -> Runtime**.
 
 ![runtime-rules](https://github.com/c-haisten/c2c_summit/assets/98335592/1332f7ea-c45f-4004-8eba-2d30a98b9cfc)
 
