@@ -159,7 +159,7 @@ Let's help Exampli Corp get a clear picture of the application running on the vu
 
 ![Alt text for image](/screenshots/maintaining-visibility-2.png "Optional title")
 
-3. Radar provides a visual depiction of the connections between containers, apps, and cluster services across your environment. It shows the ports associated with each connection, the direction of traffic flow, and internet accessibility. Take some time to play around with the Radar feature and think through the following questions:
+3. Radar provides a visual depiction of the connections between containers, apps, and cluster services across your environment. Take some time to play around with the Radar feature and think through the following questions:
 
 **What type of information can you learn by clicking on the nodes?
 How does this visibility help you protect your applications?**
