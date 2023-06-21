@@ -92,6 +92,7 @@ modules within Prisma Cloud.
 
 ![Alt text for image](/screenshots/find-and-fix-insecure-infrastructure-code-3.png "Optional title")
 
+
 4. Next, use the navigation pane to select the **Inventory** module and then select
 **Assets.**
 
@@ -99,35 +100,33 @@ modules within Prisma Cloud.
 
 5. Once in the Asset Inventory view, click on the **High Risk Assets** tab. Scroll towards the bottom and take a look at the **Google Compute Engine** service. Exampli Corps uses deployed these hosts using Googles Kubernetes service called GKE to orchestrate their container workloads that run the banking applications Exampli's customers use everyday.
 
-![image](https://github.com/c-haisten/c2c_summit/assets/98335592/17d44a4d-7825-478c-8b6c-3758981c00e9)
+![image](https://github.com/c-haisten/c2c_summit/assets/98335592/35f99789-924b-4500-8c35-f53a8f43791a)
+
+![image](https://github.com/c-haisten/c2c_summit/assets/98335592/85efb5a4-0537-4002-8af6-d35f8c484195)
 
 Note the two columns **Assets with Alerts** and **Assets with Vulnerabilities**. 
 
-![Alt text for image](/screenshots/discover-risky-assets-5.png "Optional title")
-
-6. Click on one of the hyperlinked numbers in the Assets with Alerts column.
-
-![Alt text for image](/screenshots/discover-risky-assets-6.png "Optional title")
+6. Click on one of the hyperlinked numbers in the **Assets with Alerts** column.
 
 7. Now we have a view of the assets in question along with other useful metadata.
 
-![Alt text for image](/screenshots/discover-risky-assets-7.png "Optional title")
+![image](https://github.com/c-haisten/c2c_summit/assets/98335592/5f63dee7-ac3f-4033-836f-9c8d9c2df0a6)
 
 8. Click on the first Asset Name to open a detailed side window view.
 
-![Alt text for image](/screenshots/discover-risky-assets-8.png "Optional title")
+![image](https://github.com/c-haisten/c2c_summit/assets/98335592/503ec353-8a72-40a1-ab71-28d279ad834c)
 
 9. From the side window view, we can explore the Alerts and Vulnerabilities associated with the asset in question. Note in the **Alerts** tab we can see the 4 High severity alerts associated with the asset. Note the different **Policy Name** categories.
+
+![image](https://github.com/c-haisten/c2c_summit/assets/98335592/fce4df02-3b6e-43f1-895f-da4d106664ca)
 
 We can see a couple issues right away that are a high risk such as **GCP VM instance that is internet reachable with unrestricted access (0.0.0.0/0) to Admin ports** and **GCP VM instance with data destruction permissions**.
 
 Addtionally in the **Findings** tab we can see a long list of CVE's that need to be addressed such as CVE-2023-24538, which allows code injection via Javascript.
 
-Please feel free to explore the other alerts and CVE's for more insight. 
+Please feel free to explore the other alerts and CVE's for more insight. Use the filters to find the worst CVEs impacting these hosts. 
 
-![Alt text for image](/screenshots/discover-risky-assets-9.png "Optional title")
-
-![Alt text for image](/screenshots/discover-risky-assets-10.png "Optional title")
+![image](https://github.com/c-haisten/c2c_summit/assets/98335592/ac2f322d-2440-4cfd-80b7-e3ebb1937596)
 
 Well done, you helped identify alerts and vulnerabilities present in Exampli's GKE cluster. Fortunately, Exampli Corps has integrated Prisma Cloud with the organization's Jira and Slack instances. With this integration configured the appropriate system and application owners have been notified and Jira Issues have been created to track their remediation automatically.
 
