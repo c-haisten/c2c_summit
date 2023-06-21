@@ -198,35 +198,33 @@ Prisma Cloud observes and logs behavior such as running processes, network behav
 
 ![Alt text for image](/screenshots/investigate-incidents-at-runtime-5.png "Optional title")
 
-3. Prisma Cloud observes the behavior of the workload monitoring the processes, network behavior, as well as binary executions for example. This allows administrators to both understand the behavior of their workloads as well as prevent malicious actions from taking place.
+3. To learn more please find the following documentation covering more details around runtime protection.(https://docs.paloaltonetworks.com/prisma/prisma-cloud/prisma-cloud-admin-compute/runtime_defense/runtime_defense_containers)
 
-4. To learn more please find the following documentation covering more details around runtime protection.(https://docs.paloaltonetworks.com/prisma/prisma-cloud/prisma-cloud-admin-compute/runtime_defense/runtime_defense_containers)
-
-5. Now let's take a look at a summary view of some of the suscipious behaviors taking place on this workload. Please click the close button at the bottom left of the UI. You should be back at the summary page and your screen should look similar to the screen capture below :
+4. Now let's take a look at a summary view of some of the suscipious behaviors taking place on this workload. Please click the close button at the bottom left of the UI. You should be back at the summary page and your screen should look similar to the screen capture below :
 
 ![Alt text for image](/screenshots/preventing-attacks-3.png "Optional title")
 
-6. Next, click on **Runtime** tab on the summary view. Here we can view highlights from the container's behavior and see if there are any security concerns with what the container is doing.
+5. Next, click on **Runtime** tab on the summary view. Here we can view highlights from the container's behavior and see if there are any security concerns with what the container is doing.
 
 ![runtime-events](https://github.com/c-haisten/c2c_summit/assets/98335592/92d8f7c6-a14f-4a7a-8420-07afcedd0125)
 
-7. On this screen you will find a summarized list of findings from the defender including behavior that is not in the container's model. Your screen should look similar to the screen capture below :
+6. On this screen you will find a summarized list of findings from the defender including behavior that is not in the container's model. Your screen should look similar to the screen capture below :
 
 ![runtime-summary](https://github.com/c-haisten/c2c_summit/assets/98335592/d751a357-11a1-437a-a0c3-95e30404752d)
 
-8. Find the audit finding of a foriegn binary execution of tcpdump and click on it. If you have trouble finding it you can type tcpdump in the search bar at the top of the UI.
+7. Find the audit finding of a foriegn binary execution of tcpdump and click on it. If you have trouble finding it you can type tcpdump in the search bar at the top of the UI.
 
 ![runtime-summary-1](https://github.com/c-haisten/c2c_summit/assets/98335592/24adb5ff-5f69-43af-b388-8ab63ae9929b)
 
 ![runtime-summary-filter](https://github.com/c-haisten/c2c_summit/assets/98335592/d955e32c-eee3-45c2-8e80-3c9dd9d65d77)
 
-9. This view provides an expanded understanding of the finding. We can see that Prisma Cloud alerted on this finding due to the default rule to alert on suspicious behavior. Administrators can configure their own rules alert on or block malicious activity.
+8. This view provides an expanded understanding of the finding. We can see that Prisma Cloud alerted on this finding due to the default rule to alert on suspicious behavior. Administrators can configure their own rules alert on or block malicious activity.
 
-10. Creating rules to defend applications is easy in Prisma Cloud. Use the navigation bar on the left hand side of the UI and select Compute -> Defend -> Runtime.
+9. Creating rules to defend applications is easy in Prisma Cloud. Use the navigation bar on the left hand side of the UI and select Compute -> Defend -> Runtime.
 
 ![runtime-rules](https://github.com/c-haisten/c2c_summit/assets/98335592/1332f7ea-c45f-4004-8eba-2d30a98b9cfc)
 
-11. On this page administrators can configure rules that make sense for their applications. There is a great deal of granularity given to Prisma Cloud administrators to configure allowed process, networking, and file system actitivies. Prisma Cloud defenders are also integrated with Palo Alto Network's WildFire anti-malware service allowing for the blocking of malware found on the application.
+10. On this page administrators can configure rules that make sense for their applications. There is a great deal of granularity given to Prisma Cloud administrators to configure allowed process, networking, and file system actitivies. Prisma Cloud defenders are also integrated with Palo Alto Network's WildFire anti-malware service allowing for the blocking of malware found on the application.
 
 ![runtime-rules-blocking](https://github.com/c-haisten/c2c_summit/assets/98335592/3b0f5dcb-7e1f-4668-bf90-40d41964bf41)
 
