@@ -188,6 +188,8 @@ How does this visibility help you protect your applications?**
 
 #### Modeleing Application Behavior
 
+Prisma Cloud observes and logs behavior such as running processes, network behavior, and even binary executions. Prisma Cloud then takes this data and builds a model for each workload giving administrators an understanding of what is the normal working conditions of their applications. Armed with this information administrators both understand the behavior of their workloads and can prevent malicious actions from taking place.
+
 1. Begin by clicking on the forensic microscope underneath the **Runtime** tab.
 
 ![forensic-model](https://github.com/c-haisten/c2c_summit/assets/98335592/39476dcb-54cc-418e-bca4-cfeeb42cac71)
