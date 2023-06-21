@@ -1,4 +1,4 @@
-# PRISMA CLOUD CODE TO CLOUD LAB EXERCISE
+![image](https://github.com/c-haisten/c2c_summit/assets/98335592/1319e4b0-756f-4836-90bc-666d724d7266)# PRISMA CLOUD CODE TO CLOUD LAB EXERCISE
 
 ### Lab Introduction
 
@@ -132,7 +132,7 @@ Please feel free to explore the other alerts and CVE's for more insight. Use the
 
 Well done, you helped identify alerts and vulnerabilities present in Exampli's GKE cluster. Fortunately, Exampli Corps has integrated Prisma Cloud with the organization's Jira and Slack instances. With this integration configured the appropriate system and application owners have been notified and Jira Issues have been created to track their remediation automatically.
 
-![Alt text for image](/screenshots/jira-1.png "Optional title")
+![image](https://github.com/c-haisten/c2c_summit/assets/98335592/31839fdf-c46e-4849-b6b3-ef206752073f)
 
 Prisma Cloud has many out of the box integrations as well as supports the use of Web Hooks to operationalize security outcomes using other third-party tools.
 
