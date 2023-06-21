@@ -124,6 +124,8 @@ We can see a couple issues right away that are a high risk such as **GCP VM inst
 
 Addtionally in the **Findings** tab we can see a long list of CVE's that need to be addressed such as CVE-2023-24538, which allows code injection via Javascript.
 
+![image](https://github.com/c-haisten/c2c_summit/assets/98335592/0ffb521a-6205-443c-8c5e-a109c1663ce0)
+
 Please feel free to explore the other alerts and CVE's for more insight. Use the filters to find the worst CVEs impacting these hosts. 
 
 ![image](https://github.com/c-haisten/c2c_summit/assets/98335592/ac2f322d-2440-4cfd-80b7-e3ebb1937596)
