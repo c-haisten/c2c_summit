@@ -1,4 +1,4 @@
-![image](https://github.com/c-haisten/c2c_summit/assets/98335592/1319e4b0-756f-4836-90bc-666d724d7266)# PRISMA CLOUD CODE TO CLOUD LAB EXERCISE
+# PRISMA CLOUD CODE TO CLOUD LAB EXERCISE
 
 ### Lab Introduction
 
