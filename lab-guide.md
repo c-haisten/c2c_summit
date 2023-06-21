@@ -10,7 +10,7 @@ context.
 
 ### Scenario
 
-The Exampli Corp, a mock corporation, is rushing to finish a new mobile banking app for their customers in time for the holiday season when spending patterns spike. Up against unrealistic deadlines the development and infrastructure teams are working around the clock to get their app built, tested, and released to hit their deadlines.
+The Exampli Corp, a mock corporation, is rushing to finish a new mobile banking app for their customers by the end of their fiscal quarter. Up against unrealistic goals the development and infrastructure teams are working around the clock to get their app built, tested, and released to hit their deadlines.
 
 Fortunately, Exampli Corp recently integrated Prisma Cloud into their development lifecycle adopting security from code to cloud. Once in production Exampli Corps operations and security teams continue to leverage Prisma Cloud to monitor and protect runtime resources, reduce the attack surface, and enforce least privilege.
 
