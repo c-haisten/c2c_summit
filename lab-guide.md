@@ -161,8 +161,8 @@ Let's help Exampli Corp get a clear picture of the application running on the vu
 
 3. Radar provides a visual depiction of the connections between containers, apps, and cluster services across your environment. It shows the ports associated with each connection, the direction of traffic flow, and internet accessibility. Take some time to play around with the Radar feature and think through the following questions:
 
-What type of information can you learn by clicking on the nodes?
-How does this visibility help you protect your applications?
+**What type of information can you learn by clicking on the nodes?
+How does this visibility help you protect your applications?**
 
 4. Let’s dive deeper into the **frontend:v0.5.5** microservice. Click on the associated container. Your screen should look similar to the screenshot below:
 
