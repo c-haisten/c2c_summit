@@ -82,7 +82,7 @@ below :
 
 Let's begin the lab by exploring Exampli Corp's existing assets to see if any alerts or vulnerabilities have been detected by Prisma Cloud.
 
-1. Login to [Prisma Cloud](https://app4.prismacloud.io/auth/signin).
+1. Login to [Prisma Cloud](https://app3.prismacloud.io/legacy/signin).
 
 2. Use the credentials provided by your Instructor to authenticate.
 
