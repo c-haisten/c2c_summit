@@ -129,7 +129,7 @@ Please feel free to explore the other alerts and CVE's for more insight. Use the
 
 ![image](https://github.com/c-haisten/c2c_summit/assets/98335592/ac2f322d-2440-4cfd-80b7-e3ebb1937596)
 
-Well done, you helped identify alerts and vulnerabilities present in Exampli's GKE cluster. Fortunately, Exampli Corps has integrated Prisma Cloud with the organization's Jira and Slack instances. With this integration configured the appropriate system and application owners have been notified and Jira Issues have been created to track their remediation automatically.
+Well done, you helped identify alerts and vulnerabilities present in Exampli's GKE cluster. Fortunately, Exampli Corps has integrated Prisma Cloud with the organization's Jira instance. With this integration configured the appropriate system and application owners have been notified and Jira Issues have been created to track their remediation automatically.
 
 ![image](https://github.com/c-haisten/c2c_summit/assets/98335592/31839fdf-c46e-4849-b6b3-ef206752073f)
 
